@@ -14,8 +14,8 @@ header = """
     <meta name="keywords" content="pmarca, pmarchive, guide to startups">
     <meta name="robots" content="index, follow, noarchive">
     <meta name="googlebot" content="noarchive">
-    <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="css/pmarchive.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="../../css/reset.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="../../css/pmarchive.css" media="screen" rel="stylesheet" type="text/css">
   </head>
 <body>
 """
