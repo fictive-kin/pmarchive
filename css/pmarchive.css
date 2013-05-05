@@ -323,7 +323,10 @@ b {display: none;}
 }
 
 
-
+h1.stick-to-top {
+	position: fixed;
+	top: 0;
+}
 
 
 
