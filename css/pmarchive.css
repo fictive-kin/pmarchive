@@ -302,7 +302,15 @@ h3.flourish {
 
 
 br {display: none;}
-b {display: none;}
+b {
+	display: none;
+	background: #454545;
+	color: #fff;
+	position: absolute;
+	top: 2em;
+	right: 0;
+	padding: 6px 10px 5px;
+}
 
 @media screen and (min-width: 630px) {
 
