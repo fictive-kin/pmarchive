@@ -300,7 +300,7 @@ h3.flourish {
 }
 
 
-
+br {display: none;}
 
 
 @media screen and (min-width: 630px) {
@@ -319,7 +319,7 @@ h3.flourish {
 
 	.post h1 {z-index: 10;}
 	.logo {	left: -6%;} /* 37.8px / 630px */
-
+	br {display: inline;}
 }
 
 
