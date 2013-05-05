@@ -44,7 +44,8 @@ body {
 .toc2 {
 	float: right;
 	margin: 0 10px 0 8px;
-	height: 30px;
+	height: 2em;
+	position: relative;
 }
 
 .toc2 li { 
@@ -326,6 +327,16 @@ b {display: none;}
 h1.stick-to-top {
 	position: fixed;
 	top: 0;
+}
+
+b {
+	display: inline;
+	background: #454545;
+	color: #fff;
+	position: absolute;
+	top: 2em;
+	right: 0;
+	padding: 6px 10px 5px;
 }
 
 
