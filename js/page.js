@@ -53,4 +53,23 @@
       header.className = '';
     }
   });
+
+  function mouseIn(e) {
+    var b = document.createElement('b');
+    b.id = 'tooltip';
+    var tooltip = this.getAttribute('title');
+    b.appendChild(document.createTextNode(tooltip));
+    this.parentNode.appendChild(b);
+  }
+  function mouseOut() {
+    var b = document.getElementById('tooltip');
+    b.parentNode.removeChild(b);
+  }
+
+  var toc2 = document.getElementsByClassName('toc2')[0];
+  var as = toc2.getElementsByTagName('a');
+  for (var i = 0; i < as.length; i++) {
+    addEvent(as[i], 'mouseover', mouseIn);
+    addEvent(as[i], 'mouseout', mouseOut);
+  }
 })();
