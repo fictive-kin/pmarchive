@@ -44,13 +44,22 @@
   function scrollTop() {
     return parseInt(win.pageYOffset || docElem.scrollTop  || body.scrollTop, 10);
   }
+  function cloneTitle() {
+    var header = document.getElementsByTagName('h1')[0];
+    header.className = 'scroller';
+
+    var clone = header.cloneNode();
+    clone.appendChild(document.createTextNode(header.innerHTML));
+    clone.className = 'sticker';
+    header.parentNode.insertBefore(clone, header);
+  }
+  cloneTitle();
 
   addEvent(window, 'scroll', function() {
-    var header = document.getElementsByTagName('h1')[0];
     if (scrollTop() >= 160) {
-      header.className = 'stick-to-top';
+      document.body.className = 'stick-to-top';
     } else {
-      header.className = '';
+      document.body.className = '';
     }
   });
 

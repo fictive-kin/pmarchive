@@ -331,10 +331,18 @@ b {
 	br {display: inline;}
 }
 
+.sticker {
+	display: none;
+}
 
-h1.stick-to-top {
+.stick-to-top h1.sticker{
+	display: inline;
 	position: fixed;
 	top: 0;
+}
+
+.stick-to-top h1.scroller{
+	visibility: hidden;
 }
 
 b {
