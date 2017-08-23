@@ -1,0 +1,55 @@
+---
+linters:
+    BorderZero:
+        enabled: true
+    ColorKeyword:
+        enabled: true
+    ColorVariable:
+        enabled: false
+    Comment:
+        enabled: true
+    DeclarationOrder:
+        enabled: true
+    DuplicateProperty:
+        enabled: true
+    EmptyLineBetweenBlocks:
+        enabled: true
+    EmptyRules:
+        enabled: true
+    FinalNewline:
+        enabled: false
+    HexLength:
+        enabled: true
+        style: "short"
+    HexNotation:
+        enabled: true
+        style: "uppercase"
+    HexValidation:
+        enabled: true
+    ImportPath:
+        enabled: true
+        leading_underscore: true
+        filename_extension: false
+    Indentation:
+        enabled: false
+    LeadingZero:
+        enabled: true
+        style: "exclude_zero"
+    MergeableSelector:
+        enabled: true
+        force_nesting: false
+    NameFormat:
+        enabled: true
+        allow_leading_underscore: false
+        hyphenated_lowercase: true
+    PlaceholderInExtend:
+        enabled: true
+    PropertySortOrder:
+        enabled: true
+    QualifyingElement:
+        enabled: true
+    SelectorFormat:
+        enabled: false
+        convention: hyphenated_BEM
+    VendorPrefix:
+        enabled: true
