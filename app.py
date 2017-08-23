@@ -7,8 +7,13 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/startups')
+def startups():
+    return render_template('startups.html')
+
+
 @app.route('/startups/<path:page>')
-def startups(page):
+def startup_category(page):
     return send_from_directory('pages/startups', page)
 
 
