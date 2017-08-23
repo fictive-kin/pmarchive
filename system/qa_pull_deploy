@@ -1,0 +1,60 @@
+#!/bin/bash
+
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source ${DIR}/config
+
+set -x
+
+cd $DIR/..
+
+BEFORE_PULL=`git rev-parse HEAD`
+PROD_BEFORE_PULL=`git rev-parse origin/production`
+system/pull
+AFTER_PULL=`git rev-parse HEAD`
+PROD_AFTER_PULL=`git rev-parse origin/production`
+
+do_upstream() {
+    if test -n "${UPSTREAM_REPO}"
+    then
+        system/builders/push_to_upstream_remote
+    fi
+    if test -n "${UPSTREAM_BUCKET}"
+    then
+        system/builders/sync_upstream_bucket
+    fi
+}
+
+if [[ "$PROD_BEFORE_PULL" != "$PROD_AFTER_PULL" ]]; then
+
+    if [[ "$BEFORE_PULL" != "$AFTER_PULL" ]]; then
+
+        if [[ "$PROD_AFTER_PULL" == "$AFTER_PULL" ]]; then
+
+            # Both prod and qa changed and they are at the same commit
+            # meaning that we want to fast-track some change through
+            # so build first, then push.
+            system/deploy qa
+            do_upstream
+
+        else
+            # Both prod and qa changed and they are not the same commit
+            # so push first, then build so as not to push unchecked
+            # work through to upstream
+            do_upstream
+            system/deploy qa
+        fi
+
+    else
+        # QA didn't change, so only push prod through to upstream
+        do_upstream
+    fi
+
+else
+
+    if [[ "$BEFORE_PULL" != "$AFTER_PULL" ]]; then
+        # Prod didn't change, so only deal with building QA
+        system/deploy qa
+    fi
+fi

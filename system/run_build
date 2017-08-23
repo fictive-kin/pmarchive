@@ -1,0 +1,49 @@
+#!/bin/bash
+
+test -n "${DEBUG}" && set -xv
+
+if [[ "`uname`" != "Linux" ]]; then
+    echo "Run this on the VM." >&2
+    exit 1
+fi
+
+umask 022
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+set -e
+
+source ${DIR}/config
+
+cd ${DIR}/..
+
+is_correct_branch 'qa'
+is_working_tree_clean
+export CURRENT_HASH=`git rev-parse HEAD`
+export DATE=`date +"%Y-%m-%d %H:%M"`
+
+set -x
+
+${VENV_PATH}/bin/python ./manage.py build
+
+
+if test ! -d ${SOURCE}
+then
+    echo "Build failed. Build folder does not exist!"
+    exit 1
+fi
+
+if test -n "${UPSTREAM}"
+then
+    ${DIR}/builders/commit_to_upstream_repo
+fi
+if test -n "${BUCKET}"
+then
+    ${DIR}/builders/upload_to_s3_bucket
+fi
+if test -n "${TAR_BUCKET}"
+then
+    ${DIR}/builders/upload_tar_of_build
+fi
+
+

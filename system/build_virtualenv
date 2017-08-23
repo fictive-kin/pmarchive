@@ -1,0 +1,112 @@
+#!/bin/bash
+
+test -n "${DEBUG}" && set -xv
+
+if [[ "`uname`" != "Linux" ]]; then
+    echo "Run this on the VM." >&2
+    exit 1
+fi
+
+if [[ "`whoami`" != "root" ]]; then
+   echo "Run this as root." >&2
+   exit 1
+fi
+
+# Have to ensure that the created venv (and deb) have the correct umask
+umask 022
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+set -e
+
+source ${DIR}/config
+
+eternia_key="${DEPLOY_KEYS_PATH}/${APP}-eternia-backend-submodule.key"
+req2deb="/opt/fk/requirements2deb"
+
+# Defaults
+DEB_PATH="/vagrant/debs"
+PIP_ONLY=
+FORCE_REBUILD=
+
+while test -n "${1}"
+do
+    case "${1}" in
+               ci) # change DEB_PATH if running via buildbot
+                   DEB_PATH="/opt/fk/debs"
+                   ;;
+
+               -f) # force a rebuild
+                   export FORCE_REBUILD="yes"
+                   ;;
+
+        -pip_only) # we don't want requirements2deb to build the deb
+                   export PIP_ONLY="yes"
+                   ;;
+
+                *) # ignore any other params
+                   ;;
+    esac
+    shift
+done
+
+if test -d "${VENV_PATH}"
+then
+    if test -n "${FORCE_REBUILD}"
+    then
+        echo "virtualenv rebuild forced"
+        rm -rf "${VENV_PATH}"
+
+    else
+        reqsSHA1=`sha1sum -t ${REQUIREMENTS_PATH} |awk ' { print $1 } '`
+        debSHA1=`apt-cache show virtualenvpip-${APP}-${SITE} |grep "Version:" |sort -n |tail -n1 |awk -F "-" ' { print $NF } '`
+        if test "${debSHA1}" != "${reqsSHA1}"
+        then
+            echo "requirements hash differs from current virtualenv deb, rebuilding cleanly"
+            rm -rf "${VENV_PATH}"
+
+        else
+            echo "requirements file has not changed, no need to proceed with rebuilding virtualenv"
+            exit 0
+        fi
+    fi
+fi
+
+# Prereqs to building a deb via this script
+salt-call state.sls fk.requirements2deb
+salt-call state.sls python.dev
+salt-call state.sls python.virtualenv
+salt-call state.sls ruby.fpm
+
+source ${DIR}/virtualenv_dependencies
+
+if test ! -d "${DEB_PATH}"
+then
+   mkdir -p "${DEB_PATH}"
+fi
+
+cd "${DEB_PATH}"
+rm -v virtualenvpip_${APP}-${SITE}*.deb || /bin/true
+
+# If the backend key exists, pip needs it to checkout the private FK repo
+if test -s "${eternia_key}"
+then
+    ssh-agent bash -c "ssh-add ${eternia_key}; ${req2deb} ${VENV_PATH}"
+
+else
+    "${req2deb}" "${VENV_PATH}"
+fi
+
+if test -n "${PIP_ONLY}"
+then
+    exit 0
+fi
+
+file=`ls virtualenvpip_${APP}-${SITE}*.deb`
+
+if test ! -s "${file}"
+then
+    echo "Failed to create the deb package"
+    exit 1
+fi
+

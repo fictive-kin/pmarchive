@@ -1,0 +1,31 @@
+#!/bin/bash
+
+test -n "${DEBUG}" && set -xv
+
+set -x
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+source ${DIR}/config
+
+cd ${DIR}/../../external
+
+if test -z "${UPSTREAM_REPO}" -o -z "${UPSTREAM_DEPLOY_KEY}"
+then
+    echo "No upstream repo to push to. Ignoring."
+    # Successful exit.
+    exit 0
+fi
+
+is_correct_branch 'master'
+is_working_tree_clean
+
+# Add upstream remote if not exists
+git remote show upstream
+if test $? -gt 0
+then
+    git remote add upstream ${UPSTREAM_REPO}
+fi
+
+# Using the appropriate deploy key, push it.
+ssh-agent bash -c "ssh-add ${UPSTREAM_DEPLOY_KEY}; \
+   git push upstream master:master"

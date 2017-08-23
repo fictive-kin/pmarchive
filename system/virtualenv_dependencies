@@ -1,0 +1,29 @@
+#!/bin/bash
+
+test -n "${DEBUG}" && set -xv
+
+FPM_OPTS="--vendor Fictive_Kin -m systems@fictivekin.com"
+
+build_debs="$( dirname "${BASH_SOURCE[0]}" )/virtualenv_dependencies-dev.txt"
+
+if test -s "${build_debs}"
+then
+    apt-get install -y `cat ${build_debs}`
+fi
+
+extra_debs="$( dirname "${BASH_SOURCE[0]}" )/virtualenv_dependencies.txt"
+
+if test ! -s "${extra_debs}"
+then
+    echo "No special system packages are required"
+
+else
+
+    apt-get install -y `cat ${extra_debs}`
+    for deb in `cat ${extra_debs}`
+    do
+        FPM_OPTS="${FPM_OPTS} -d ${deb}"
+    done
+fi
+
+export FPM_OPTS

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Need to accept the original 3 parameters until the salt states
+# get changed and all apps work with the new config mechanism
+
+show_usage () {
+    echo "Usage: $0 appname /path/to/virtualenv appenv" >&2
+    exit 255
+}
+
+if [ $# -lt 3 ]
+then
+    show_usage
+fi
+
+export APPENV=$3
+
+shift 3
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+source ${DIR}/config
+
+if [ ! -d "${VENV_PATH}" ]
+then
+    echo "Virtual Environment does not exist: ${VENV_PATH}"
+    exit 1
+fi
+
+
+cd ${DIR}/..
+set -x
+
+export DEFAULT_PORT=9000
+${VENV_PATH}/bin/python ./manage.py run
