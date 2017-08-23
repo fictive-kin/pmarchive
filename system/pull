@@ -1,7 +1,0 @@
-#!/bin/bash
-
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-source ${DIR}/config
-
-ssh-agent bash -c "ssh-add ${DEPLOY_KEY}; cd ${DIR}/..; git pull; git submodule update --init"
