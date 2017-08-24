@@ -40,8 +40,12 @@ a:hover {
 .is-home .hero {
     background-image: url('../img/pm-home-bg.jpg');
     color: $white;
-    padding: 100px 7.5% 35px;
+    padding: 50px 7.5% 35px;
     position: relative;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 100px;
+    }
 }
 
 .hero {
@@ -53,7 +57,11 @@ a:hover {
 }
 
 .hero__header {
-    font-size: $text-large; //spec
+    font-size: 11vw;
+
+    @media screen and (min-width: $tablet) {
+        font-size: $text-large; //spec
+    }
 }
 
 .is-home .hero__header {
@@ -91,13 +99,19 @@ a:hover {
     color: $black;
     display: block;
     font-weight: 100;
-    padding: 85px 7.5% 60px;
+    padding: 45px 7.5%;
     position: relative;
     text-decoration: none;
     width: 100%;
 
     @media screen and (min-width: $desktop) {
         min-height: 570px; //spec
+        padding: 85px 7.5% 60px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        //custom media query for very large desktops
+        min-height: 705px;
     }
 }
 
@@ -144,17 +158,29 @@ a:hover {
 .article__title {
     @include serif-rom;
 
-    font-size: $text-large;
+    font-size: 11vw;
     letter-spacing: .045rem;
+    margin-bottom: 40px; //arb
+
+    @media screen and (min-width: $tablet) {
+        font-size: $text-large;
+    }
 
     @media screen and (min-width: $max-width) {
         font-size: $text-large-max;
+        margin-bottom: 0;
     }
 }
 
 .article-list__subtitle {
+    font-size: 16px;
     font-weight: 100;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 21px; //spec
+        margin-bottom: 50px; //spec
+    }
 }
 
 .indent {
