@@ -8,10 +8,12 @@
 
 html {
     font-family: helvetica;
+    font-size: 16px;
 }
 //link styles:
 a {
     text-decoration: underline;
+    transition: all $speed $ease;
 }
 
 a:visited {
@@ -21,7 +23,14 @@ a:visited {
 a:hover {
     opacity: .6;
     text-decoration: none;
-    transition: all $speed $ease;
+}
+
+//=====================
+//   CONTAINER STYLES
+//=====================
+
+.container {
+    max-width: $max-width;
 }
 
 //=====================
@@ -44,7 +53,7 @@ a:hover {
 }
 
 .hero__header {
-    font-size: 272px; //spec
+    font-size: $text-large; //spec
 }
 
 .is-home .hero__header {
@@ -56,4 +65,103 @@ a:hover {
     font-weight: 100;
     position: absolute;
     right: 50px;
+}
+
+//=====================
+// ARTICLE ITEMS
+//=====================
+
+.article-list__link {
+    background-color: inherit;
+    color: $black;
+    display: block;
+    font-weight: 100;
+    padding: 85px 7.5% 60px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+        min-height: 570px; //spec
+    }
+}
+
+//TODO: make an each loop for colors
+.pink .article-list__link {
+    background-color: $pink;
+}
+
+.teal .article-list__link {
+    background-color: $teal;
+}
+
+.gold .article-list__link {
+    background-color: $gold;
+}
+
+.purple .article-list__link {
+    background-color: $purple;
+}
+
+.article-list__link:hover {
+    background-color: $black;
+    opacity: 1;
+    transform: translateZ(0);
+}
+
+.pink .article-list__link:hover {
+    color: $pink;
+}
+
+.teal .article-list__link:hover {
+    color: $teal;
+}
+
+.gold .article-list__link:hover {
+    color: $gold;
+}
+
+.purple .article-list__link:hover {
+    color: $purple;
+}
+
+
+.article__title {
+    @include serif-rom;
+
+    font-size: $text-large;
+    letter-spacing: .045rem;
+
+    @media screen and (min-width: $max-width) {
+        font-size: $text-large-max;
+    }
+}
+
+.article-list__subtitle {
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.indent {
+    display: block;
+    padding-left: 7%;
+}
+
+.article__chapters {
+    text-align: right;
+
+    @media screen and (min-width: $desktop) {
+        bottom: 40px; //spec
+        position: absolute;
+        right: 7.5%; //aligns with article-list__link
+    }
+}
+
+//=============
+//  MODIFIERS
+//=============
+.article__title--guide {
+    @media screen and (min-width: $desktop) {
+        max-width: 700px;
+    }
 }
