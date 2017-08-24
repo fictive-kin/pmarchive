@@ -33,6 +33,13 @@ a:hover {
     text-decoration: none;
 }
 
+blockquote {
+    @include serif-rom;
+
+    color: $grey;
+    font-size: 48px;
+}
+
 //=====================
 //   CONTAINER STYLES
 //=====================
@@ -307,4 +314,26 @@ a:hover {
     @media screen and (min-width: $max-width) {
         font-size: 72px; //spec
     }
+}
+
+.article__body {
+    padding: 100px 6.1%;
+}
+
+.article__body-wrapper {
+    max-width: 870px; //spec
+    margin: 0 auto;
+}
+
+.article__body p {
+    margin: 0 auto 80px; //spec
+    max-width: 900px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 0 100px;
+    }
+}
+
+.article__body blockquote {
+    margin-bottom: 80px; //spec
 }
