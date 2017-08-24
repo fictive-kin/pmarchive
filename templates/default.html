@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Pmarchive {% block title%}| {%endblock%}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="" />
+        <meta name="keywords" content="pmarca, pmarchive, guide to startups" />
+        <meta name="robots" content="index, follow, noarchive" />
+        <meta name="googlebot" content="noarchive" />
+        <link href="{{url_for('static', filename='css/screen.css')}}" media="screen" rel="stylesheet" type="text/css" />
+     </head>
+    <body class="{% block bodyClass %}{% endblock %}">
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

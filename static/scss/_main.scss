@@ -1,3 +1,59 @@
-body {
-    background-color: pink;
+//=================
+//  BASE STYLES
+//=================
+*,
+* > {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: helvetica;
+}
+//link styles:
+a {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    opacity: .6;
+    text-decoration: none;
+    transition: all $speed $ease;
+}
+
+//=====================
+//  HERO STYLES
+//=====================
+
+.is-home .hero {
+    background-image: url('../img/pm-home-bg.jpg');
+    color: $white;
+    padding: 100px 7.5% 35px;
+    position: relative;
+}
+
+.hero {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+}
+
+.hero__header {
+    font-size: 272px; //spec
+}
+
+.is-home .hero__header {
+    font-size: 108px; //spec
+}
+
+.is-home .hero__text {
+    bottom: 35px;
+    font-weight: 100;
+    position: absolute;
+    right: 50px;
 }

@@ -1,0 +1,84 @@
+//fonts
+@font-face {
+    font-family: 'Px Bold';
+    src: url('../fonts/Px-Grotesk-Bold.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Bold.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Px Bold Italic';
+    src: url('../fonts/Px-Grotesk-Bold-Italic.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Bold-Italic.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Bold-Italic.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Px Light';
+    src: url('../fonts/Px-Grotesk-Light.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Light.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Light.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Px Regular Italic';
+    src: url('../fonts/Px-Grotesk-Regular-Italic.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Regular-Italic.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Regular-Italic.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Px Regular';
+    src: url('../fonts/Px-Grotesk-Regular.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Regular.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'BigCaslon Regular';
+    src: url('../fonts/bigcaslon-regular.woff2') format('woff2'),
+    url('../fonts/bigcaslon-regular.woff2') format('woff'),
+    url('../fonts/bigcaslon-regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'BigCaslon Rom';
+    src: url('../fonts/bigcaslon-rom.woff2') format('woff2'),
+    url('../fonts/bigcaslon-rom.woff2') format('woff'),
+    url('../fonts/bigcaslon-rom.ttf') format('ttf');
+}
+
+@mixin serif-regular {
+    font-family: 'BigCaslon Regular';
+    font-weight: 300;
+}
+
+@mixin serif-rom {
+    font-family: 'BigCaslon Rom';
+    font-weight: 300;
+}
+
+@mixin sans-bold {
+    font-family: 'Px Bold';
+    font-weight: 600;
+}
+
+@mixin sans-bold-italic {
+    font-family: 'Px Bold Italic';
+    font-weight: 600;
+}
+
+@mixin sans-light {
+    font-family: 'Px Light';
+    font-weight: 100;
+}
+
+@mixin sans-regular-italic {
+    font-family: 'Px Regular Italic';
+    font-weight: 300;
+}
+
+@mixin sans-regular {
+    font-family: 'Px Regular';
+    font-weight: 300;
+}
