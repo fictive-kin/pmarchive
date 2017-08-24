@@ -11,6 +11,7 @@ html {
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    font-weight: 100;
 }
 
 body {
@@ -47,6 +48,7 @@ a:hover {
 .is-home .hero {
     background-image: url('../img/pm-home-bg.jpg');
     color: $white;
+    height: 80vh;
     padding: 50px 7.5% 35px;
     position: relative;
 
@@ -55,15 +57,26 @@ a:hover {
     }
 }
 
+.pink .hero {
+    background-image: url('../img/pm-pink-bg.jpg');
+    color: $pink;
+}
+
+.pink .chapter__heading {
+    background-color: $pink;
+}
+
 .hero {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    position: relative;
     width: 100%;
 }
 
 .hero__header {
+    @include serif-rom;
+
     font-size: 11vw;
 
     @media screen and (min-width: $tablet) {
@@ -72,6 +85,8 @@ a:hover {
 }
 
 .is-home .hero__header {
+    @include sans-regular;
+
     font-size: 13vw;
 
     @media screen and (min-width: 600px) {
@@ -86,7 +101,6 @@ a:hover {
 .is-home .hero__text {
     bottom: 35px;
     font-size: 21px; //spec
-    font-weight: 100;
     left: 0;
     padding: 0 7.5%;
     position: absolute;
@@ -106,7 +120,6 @@ a:hover {
     background-color: inherit;
     color: $black;
     display: block;
-    font-weight: 100;
     padding: 45px 7.5%;
     position: relative;
     text-decoration: none;
@@ -201,7 +214,7 @@ a:hover {
     text-align: right;
 
     @media screen and (min-width: $tablet) {
-        font-size: 24px;
+        font-size: 21px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -235,7 +248,6 @@ a:hover {
 
 .message__text-wrapper {
     font-size: 20px; //arb
-    font-weight: 100;
     line-height: 1.2; //arb
     margin: 0 auto;
     max-width: 861px; //spec
@@ -253,4 +265,16 @@ a:hover {
         text-indent: 37px; //spec
     }
 
+}
+
+//===================
+//  ARTICLE STYLES
+//===================
+
+.article__hero {
+    padding: 45px 7.5%;
+
+    @media screen and (min-width: $tablet) {
+        padding: 67px 5.76%;
+    }
 }

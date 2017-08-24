@@ -1,4 +1,13 @@
-{% extends 'default.html' %}
+{% extends 'article.html' %}
+{% block bodyClass %}pink {{ super() }}{% endblock %}
 {% block body %}
-
+    <main class="main article">
+        <section class="hero article__hero">
+            <div class="container">
+                <h3 class="article-list__subtitle">Something One</h3>
+                <h1 class="hero__header article__title--guide">The Pmarca  <span class="indent">Guide to Startups</span></h1>
+                <p class="article__chapters">8 chapters</p>
+            </div>
+        </section>
+    </main>
 {% endblock %}
