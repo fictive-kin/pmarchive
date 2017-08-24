@@ -57,14 +57,29 @@ a:hover {
 }
 
 .is-home .hero__header {
-    font-size: 108px; //spec
+    font-size: 13vw;
+
+    @media screen and (min-width: 600px) {
+        font-size: 7.6vw; //spec
+    }
+
+    @media screen and (min-width: $max-width) {
+        font-size: 108px; //spec
+    }
 }
 
 .is-home .hero__text {
     bottom: 35px;
     font-weight: 100;
+    left: 0;
+    padding: 0 7.5%;
     position: absolute;
-    right: 50px;
+
+    @media screen and (min-width: $tablet) {
+        left: auto;
+        padding: 0;
+        right: 50px;
+    }
 }
 
 //=====================
