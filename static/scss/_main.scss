@@ -360,6 +360,21 @@ blockquote {
     color: $black;
 }
 
+.article ul {
+    list-style-type: disc;
+    margin-bottom: 40px;
+    padding: 0 7.5%;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 80px;
+        padding: 0 100px;
+    }
+}
+
+.article li {
+    margin-bottom: 15px; //arb
+}
+
 .pink .article a:hover {
     color: $pink;
     opacity: 1;
