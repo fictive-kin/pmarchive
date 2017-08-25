@@ -379,3 +379,21 @@ blockquote {
     color: $pink;
     opacity: 1;
 }
+
+.quote-wrapper p {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 25px;
+    }
+}
+
+.quote-wrapper {
+    margin-bottom: 40px; //arb
+}
+
+.pink .quote-wrapper {
+    color: darken($pink, 7%); //arb to make the color visible against the white bg
+}
