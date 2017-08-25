@@ -37,7 +37,14 @@ blockquote {
     @include serif-rom;
 
     color: $grey;
-    font-size: 48px;
+    font-size: 28px; //arb
+    line-height: 1.4; // arb
+
+    @media screen and (min-width: $tablet) {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
 }
 
 //=====================
@@ -321,19 +328,39 @@ blockquote {
 }
 
 .article__body-wrapper {
-    max-width: 870px; //spec
     margin: 0 auto;
+    max-width: 870px; //spec
 }
 
 .article__body p {
-    margin: 0 auto 80px; //spec
+    font-size: 18px; //arb
+    line-height: 1.4; //arb
+    margin: 0 auto 40px; //spec
     max-width: 900px;
 
+    @media screen and (min-width: $mobile) {
+        font-size: 24px; //spec
+    }
+
     @media screen and (min-width: $desktop) {
+        margin: 0 auto 80px; //spec
         padding: 0 100px;
     }
 }
 
 .article__body blockquote {
-    margin-bottom: 80px; //spec
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 80px; //spec
+    }
+}
+
+.article a {
+    color: $black;
+}
+
+.pink .article a:hover {
+    color: $pink;
+    opacity: 1;
 }
