@@ -33,19 +33,6 @@ a:hover {
     text-decoration: none;
 }
 
-blockquote {
-    @include serif-rom;
-
-    color: $grey;
-    font-size: 28px; //arb
-    line-height: 1.4; // arb
-
-    @media screen and (min-width: $tablet) {
-        font-size: 48px;
-        line-height: 1.2;
-    }
-
-}
 
 //=====================
 //   CONTAINER STYLES
@@ -348,16 +335,39 @@ blockquote {
     }
 }
 
-.article__body blockquote {
-    margin-bottom: 40px;
+.article a {
+    color: $black;
+}
+
+.article blockquote p {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
 
     @media screen and (min-width: $tablet) {
-        margin-bottom: 80px; //spec
+        font-size: 25px;
     }
 }
 
-.article a {
-    color: $black;
+.article blockquote {
+    margin-bottom: 40px; //arb
+}
+
+.callout,
+p.callout {
+    @include serif-rom;
+
+    color: $grey;
+    font-size: 28px; //arb
+    line-height: 1.4; // arb
+    margin-bottom: 40px;
+    padding: 0;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 48px; //override specific styles
+        line-height: 1.2;
+        margin-bottom: 80px; //spec
+    }
 }
 
 .article ul {
@@ -380,20 +390,6 @@ blockquote {
     opacity: 1;
 }
 
-.quote-wrapper p {
-    font-size: 20px;
-    font-style: italic;
-    margin-bottom: 20px;
-
-    @media screen and (min-width: $tablet) {
-        font-size: 25px;
-    }
-}
-
-.quote-wrapper {
-    margin-bottom: 40px; //arb
-}
-
-.pink .quote-wrapper {
+.pink blockquote {
     color: darken($pink, 7%); //arb to make the color visible against the white bg
 }
