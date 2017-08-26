@@ -371,9 +371,14 @@ p.callout {
 }
 
 .article ul {
+    font-size: 18px;
     list-style-type: disc;
     margin-bottom: 40px;
     padding: 0 7.5%;
+
+    @media screen and (min-width: $mobile) {
+        font-size: 24px;
+    }
 
     @media screen and (min-width: $tablet) {
         margin-bottom: 80px;
