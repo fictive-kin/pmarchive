@@ -1,0 +1,1240 @@
+{% extends 'article.html' %}
+{% block bodyClass %}pink {{ super() }}{% endblock %}
+{% block body %}
+    <main class="main article">
+        <section class="hero article__hero">
+            <div class="container">
+                <h3 class="article-list__subtitle">Something One</h3>
+                <h1 class="hero__header article__title--guide">The Pmarca  <span class="indent">Guide to Startups</span></h1>
+                <p class="article__chapters">8 chapters</p>
+            </div>
+        </section>
+        <article>
+            <section class="chapter">
+                <div class="container">
+                    <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
+                    <h1 class="chapter__header">Chapter 1 : <span class="indent">Why Not To Do a Startup</span></h1>
+                    <p class="article__chapters">Jun 18, 2007</p>
+                </div>
+            </section>
+            <div class="article__body">
+                <div class="article__body-wrapper">
+                    <p>In this series of posts I will walk through some of my accumulated knowledge and experience in building high-tech startups.</p>
+                    <p>My specific experience is from three companies I have co-founded: Netscape, sold to America Online in 1998 for $4.2 billion; Opsware (formerly Loudcloud), a public software company with an approximately $1 billion market cap; and now Ning, a new, private consumer Internet company.</p>
+                    <p class="callout">But more generally, I've been fortunate enough to be involved in and exposed to a broad range of other startups -- maybe 40 or 50 in enough detail to know what I'm talking about -- since arriving in Silicon Valley in 1994: as a board member, as an angel investor, as an advisor, as a friend of various founders, and as a participant in various venture capital funds.</p>
+                    <p>This series will focus on lessons learned from this entire cross-section of Silicon Valley startups -- so don't think that anything I am talking about is referring to one of my own companies: most likely when I talk about a scenario I have seen or something I have experienced, it is from some other startup that I am not naming but was involved with some other way than as a founder.</p>
+                    <p>Finally, much of my perspective is based on Silicon Valley and the environment that we have here -- the culture, the people, the venture capital base, and so on. Some of it will travel well to other regions and countries, some probably will not. Caveat emptor</p>
+                    <p class="callout">With all that out of the way, let's start at the beginning: <strong>why not to do a startup</strong>.</p>
+                    <p>Startups, even in the wake of the crash of 2000, have become imbued with a real mystique -- you read a lot about how great it is to do a startup, how much fun it is, what with the getting to invent the future, all the free meals, foosball tables, and all the rest.</p>
+                    <p>Now, <strong>it is true that there are a lot of great things about doing a startup</strong>. They include, in my experience:</p>
+                    <p>Most fundamentally, <em>the opportunity to be in control of your own destiny</em> -- you get to succeed or fail on your own, and you don't have some bozo telling you what to do. For a certain kind of personality, this alone is reason enough to do a startup.</p>
+                    <p class="callout"><em>The opportunity to create something new</em> -- the proverbial blank sheet of paper. You have the ability -- actually, the obligation -- to imagine a product that does not yet exist and bring it into existence, without any of the constraints normally faced by larger companies.</p>
+                    <p><em>The opportunity to have an impact on the world</em> -- to give people a new way to communicate, a new way to share information, a new way to work together, or anything else you can think of that would make the world a better place. Think it should be easier for low-income people to borrow money? Start <a href="https://www.prosper.com/">Prosper</a>. Think television should be opened up to an infinite number of channels? Start Joost. Think that computers should be based on Unix and open standards and not proprietary technology? Start <a href="http://web.archive.org/web/20100617142314/http://www.oracle.com:80/us/sun/index.html">Sun</a>.</p>
+                    <p>The ability to <em>create your ideal culture and work with a dream team of people</em> you get to assemble yourself. Want your culture to be based on people who have fun every day and enjoy working together? Or, are hyper-competitive both in work and play? Or, are super-focused on creating innovative new rocket science technologies? Or, are global in perspective from day one? You get to choose, and to build your culture and team to suit.</p>
+                    <p>And finally, <em>money</em> -- startups done right can of course be highly lucrative. This is not just an issue of personal greed -- when things go right, your team and employees will themselves do very well and will be able to support their families, send their kids to college, and realize their dreams, and that's really cool. And if you're really lucky, you as the entrepreneur can ultimately make profound philanthropic gifts that change society for the better.</p>
+                    <p>However, <strong>there are many more reasons to <em>not</em> do a startup</strong></p>
+                    <p>First, and most importantly, realize that a startup puts you on an <em>emotional rollercoaster</em> unlike anything you have ever experienced.</p>
+                    <p>You will flip rapidly from a day in which you are euphorically convinced you are going to own the world, to a day in which doom seems only weeks away and you feel completely ruined, and back again.</p>
+                    <p>Over and over and over.</p>
+                    <p>And I'm talking about what happens to <em>stable</em> entrepreneurs.</p>
+                    <p>There is <em>so</em> much uncertainty and <em>so</em> much risk around practically everything you are doing.  Will the product ship on time?  Will it be fast enough?  Will it have too many bugs?  Will it be easy to use?  Will anyone use it?  Will your competitor beat you to market?  Will you get any press coverage?  Will anyone invest in the company?  Will that key new engineer join?  Will your key user interface designer quit and go to Google?  And on and on and on...</p>
+
+                    <p>Some days things will go really well and some things will go really poorly.  And the level of stress that you're under generally will magnify those transient data points into incredible highs and unbelievable lows at whiplash speed and huge magnitude.</p>
+
+                    <p>Sound like fun?</p>
+
+                    <p>Second, in a startup, <em>absolutely nothing happens unless you make it happen</em>.</p>
+
+                    <p>This one throws both founders and employees new to startups.</p>
+
+                    <p>In an established company -- no matter how poorly run or demoralized -- things happen.  They just happen.  People come in to work.  Code gets written.  User interfaces get designed.  Servers get provisioned.  Markets get analyzed.  Pricing gets studied and determined.  Sales calls get made.  The wastebaskets get emptied.  And so on.</p>
+
+                    <p class="callout">A startup has none of the established systems, rhythms, infrastructure that any established company has.</p>
+
+                    <p>In a startup it is very easy for the code to not get written, for the user interfaces to not get designed... for people to not come into work... and for the wastebaskets to not get emptied.</p>
+
+                    <p>You as the founder have to put all of these systems and routines and habits in place and get everyone actually rowing -- forget even about rowing in the right direction: just rowing at all is hard enough at the start.</p>
+
+                    <p>And until you do, absolutely nothing happens.</p>
+
+                    <p>Unless, of course, you do it yourself.</p>
+
+                    <p>Have fun emptying those wastebaskets.</p>
+
+                    <p>Third, <em>you get told no -- a lot</em>.</p>
+
+                    <p>Unless you've spent time in sales, you are probably not familiar with being told no a lot.</p>
+
+                    <p>It's not so much fun.</p>
+
+                    <p>Go watch <a href="http://web.archive.org/web/20100615060031/http://www.amazon.com/gp/product/B0000640TB?ie=UTF8&tag=marandsblo-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B0000640TB">Death of a Salesman</a> and then <a href="http://web.archive.org/web/20100615060031/http://www.amazon.com/gp/product/B00005JKG9?ie=UTF8&tag=marandsblo-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B00005JKG9">Glengarry Glen Ross</a>.</p>
+
+                    <p>That's roughly what it's like.</p>
+
+                    <p>You're going to get told no by potential employees, potential investors, potential customers, potential partners, reporters, analysts...</p>
+
+                    <p>Over and over and over.</p>
+
+                    <p>And when you do get a "yes", half the time you'll get a call two days later and it'll turn out the answer has morphed into "no".</p>
+
+                    <p>Better start working on your fake smile.</p>
+
+                    <p>Fourth, <em>hiring is a huge pain in the ass</em>.</p>
+
+                    <p>You will be amazed how many windowshoppers you'll deal with.</p>
+
+                    <p>A lot of people think they want to be part of a startup, but when the time comes to leave their cushy job at HP or Apple, they flinch -- and stay.</p>
+
+                    <p>Going through the recruiting process and being seduced by a startup is heady stuff for your typical engineer or midlevel manager at a big company -- you get to participate vicariously in the thrill of a startup without actually having to join or do any of the hard work.</p>
+
+                    <p>As a founder of a startup trying to hire your team, you'll run into this again and again.</p>
+
+                    <p>When Jim Clark decided to start a new company in 1994, I was one of about a dozen people at various Silicon Valley companies he was talking to about joining him in what became Netscape.</p>
+
+                    <p>I was the only one who went all the way to saying "yes" (largely because I was 22 and had no reason not to do it).</p>
+
+                    <p>The rest flinched and didn't do it.</p>
+
+                    <p>And this was Jim Clark, a legend in the industry who was coming off of the most successful company in Silicon Valley in 1994 -- Silicon Graphics Inc.</p>
+
+                    <p>How easy do you think it's going to be for you?</p>
+
+                    <p><em>Then</em>, once you do get through the windowshoppers and actually hire some people, your success rate on hiring is probably not going to be higher than 50%, and that's if you're good at it.</p>
+
+                    <p>By that I mean that half or more of the people you hire aren't going to work out.  They're going to be too lazy, too slow, easily rattled, political, bipolar, or psychotic.</p>
+
+                    <p>And then you have to either live with them, or fire them.</p>
+
+                    <p>Which ones of those sounds like fun?</p>
+
+                    <p>Fifth, God help you, <em>at some point you're going to have to hire executives</em>.</p>
+
+                    <p>You think hiring employees is hard and risky -- wait until you start hiring for VP Engineering, VP Marketing, VP Sales, VP HR, General Counsel, and CFO.</p>
+
+                    <p>Sixth, <em>the hours</em>.</p>
+
+                    <p>There's been a lot of talk in Silicon Valley lately about work/life balance -- about how you should be able to do a startup and simultaneously live a full and fulfilling outside life.</p>
+
+                    <p>Now, personally, I have a lot of sympathy for that point of view.</p>
+
+                    <p>And I try hard in my companies (well, at least my last two companies) to do whatever I can to help make sure that people aren't ground down to little tiny spots on the floor by the workload and the hours.</p>
+
+                    <p>But, it's really difficult.</p>
+
+                    <p>The fact is that startups are incredibly intense experiences and take a lot out of people in the best of circumstances.</p>
+
+                    <p>And just because you want people to have work/life balance, it's not so easy when you're close to running out of cash, your product hasn't shipped yet, your VC is mad at you, and your Kleiner Perkins-backed competitor in Menlo Park -- you know, the one whose employees' average age seems to be about 19 -- is kicking your butt.</p>
+
+                    <p>Which is what it's going to be like most of the time.</p>
+
+                    <p>And even if you can help your employees have proper work/life balance, as a founder you certainly won't.</p>
+
+                    <p>(In case you were wondering, by the way, the hours do compound the stress.)</p>
+
+                    <p>Seventh, <em>it's really easy for the culture of a startup to go sideways</em>.</p>
+
+                    <p>This combines the first and second items above.</p>
+
+                    <p>This is the emotional rollercoaster wreaking havoc on not just you but your whole company.</p>
+
+                    <p>It takes time for the culture of any company to become "set" -- for the team of people who have come together for the first time to decide collectively what they're all about, what they value -- and how they look at challenge and adversity.</p>
+
+                    <p>In the best case, you get an amazing dynamic of people really pulling together, supporting one another, and working their collective tails off in pursuit of a dream.</p>
+
+                    <p>In the worst case, you end up with widespread, self-reinforcing bitterness, disillusionment, cynicism, bad morale, contempt for management, and depression.</p>
+
+                    <p>And you as the founder have much less influence over this than you'll think you do.</p>
+
+                    <p>Guess which way it usually goes.</p>
+
+                    <p>Eighth, there are lots of <em>X factors</em> that can come along and whup you right upside the head, and there's absolutely nothing you can do about them.</p>
+
+                    <p>Stock market crashes.</p>
+
+                    <p>Terrorist attacks.</p>
+
+                    <p>Natural disasters.</p>
+
+                    <p>A better funded startup with a more experienced team that's been hard at work longer than you have, in stealth mode, that unexpectedly releases a product that swiftly comes to dominate your market, completely closing off your opportunity, and you had no idea they were even working on it.</p>
+
+                    <p>At best, any given X factor might slam shut the fundraising window, cause customers to delay or cancel purchases -- or, at worst, shut down your whole company.</p>
+
+                    <p>Russian mobsters laundering millions of dollars of dirty money through your service, resulting in the credit card companies closing you down.</p>
+
+                    <p><a href="http://web.archive.org/web/20100615060031/http://news.com.com/How+to+pitch+your+company+-+page+2/2010-1071_3-5631760-2.html">You think I'm joking about that one?</a></p>
+
+                    <p><strong>OK, now here's the best part:</strong></p>
+
+                    <p>I haven't even talked about figuring out what product to build, building it, taking it to market, and standing out from the crowd.</p>
+
+                    <p>All the risks in the core activities of what your company actually does are yet to come, and to be discussed in future posts in this series.</p>
+                </div> <!-- end article__body-wrapper -->
+            </div> <!-- end article__body -->
+            <section class="chapter">
+                <div class="container">
+                    <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
+                    <h1 class="chapter__header">Chapter 2 : <span class="indent">When the VCs say "no"</span></h1>
+                    <p class="article__chapters">Jun 20, 2007</p>
+                </div>
+            </section>
+            <div class="article__body">
+                <div class="article__body-wrapper">
+                    <p>This post is about what to do between when the VCs say "no" to funding your startup, and when you either change their minds or find some other path.</p>
+                    <p>I'm going to assume that you've done all the basics: developed a plan and a <a href="http://web.archive.org/web/20100608100318/http://www.feld.com/blog/archives/2004/06/the_torturous_w.html">pitch</a>, <a href="http://web.archive.org/web/20100608100318/http://web.archive.org/web/20080229161752/http://blog.pmarca.com/2007/06/the_truth_about.html">decided that venture financing is right for you and you are right for venture financing</a>, lined up meetings with properly qualified VCs, and <a href="http://web.archive.org/web/20100608100318/http://www.nj.com/business/ledger/index.ssf?/news/stories/0909thepitch.html">made your pitch</a>.</p>
+
+                    <p>And the answer has come back and it's "no".</p>
+
+                    <p>One "no" doesn't mean anything -- the VC could just be having a bad day, or she had a bad experience with another company in your category, or she had a bad experience with another company with a similar name, or she had a bad experience with another founder who kind of looks like you, or her Mercedes SLR McLaren's engine could have blown up on the freeway that morning -- it could be anything.  Go meet with more VCs.</p>
+
+                    <p class="callout">If you meet with three VCs and they all say "no", it could just be a big coincidence.  Go meet with more VCs.</p>
+
+                    <p>If you meet with five, or six, or eight VCs and they all say no, it's not a coincidence.</p>
+
+                    <p>There is something wrong with your plan.</p>
+
+                    <p>Or, even if there isn't, there might as well be, because you're still not getting funded.</p>
+
+                    <p>Meeting with more VCs after a bunch have said no is probably a waste of time.  Instead, retool your plan -- which is what this post is about.</p>
+
+                    <p>But <strong>first, lay the groundwork to go back in later</strong>.</p>
+
+                    <p>It's an old -- and true -- cliche that VCs rarely actually say "no" -- more often they say "maybe", or "not right now", or "my partners aren't sure", or "that's interesting, let me think about it".</p>
+
+                    <p class="callout">They do that because they don't want to invest in your company given the current facts, but they want to keep the door open in case the facts change.</p>
+
+                    <p>And that's exactly what you want -- you want to be able to go back to them with a new set of facts, and change their minds, and get to "yes".</p>
+
+                    <p>So be sure to take "no" gracefully -- politely ask them for feedback (which they probably won't give you, at least not completely honestly -- nobody likes calling someone else's baby ugly -- believe me, I've done it), thank them for their time, and ask if you can call them again if things change.</p>
+
+                    <p class="callout">Trust me -- they'd much rather be saying "yes" than "no" -- they need all the good investments they can get.</p>
+
+                    <p><strong>Second, consider the environment.</strong></p>
+
+                    <p>Being told "no" by VCs in 1999 is a lot different than being told "no" in 2002.</p>
+
+                    <p>If you were told "no" in 1999, I'm sure you're a wonderful person and you have huge potential and your mother loves you very much, but your plan really was seriously flawed.</p>
+
+                    <p>If you were told "no" in 2002, you probably actually were the next Google, but most of the VCs were hiding under their desks and they just missed it.</p>
+
+                    <p>In my opinion, we're now in a much more rational environment than either of those extremes -- a lot of good plans are being funded, along with some bad ones, but not all the bad ones.</p>
+
+                    <p>I'll proceed under the assumption that we're in normal times.  But if things get truly euphoric or truly funereal again, the rest of this post will probably not be very helpful -- in either case.</p>
+
+                    <p><strong>Third, retool your plan.</strong></p>
+
+                    <p>This is the hard part -- changing the facts of your plan and what you are trying to do, to make your company more fundable.</p>
+
+                    <p>To describe the dimensions that you should consider as you contemplate retooling your plan, let me introduce the <strong>onion theory of risk</strong>.</p>
+
+                    <p>If you're an investor, you look at the risk around an investment as if it's an onion.  Just like you peel an onion and remove each layer in turn, risk in a startup investment comes in layers that get peeled away -- reduced -- one by one.</p>
+
+                    <p>Your challenge as an entrepreneur trying to raise venture capital is to keep peeling layers of risk off of your particular onion until the VCs say "yes" -- until the risk in your startup is reduced to the point where investing in your startup doesn't look terrifying and merely looks risky.</p>
+
+                    <p><strong>What are the layers of risk for a high-tech startup?</strong></p>
+
+                    <p>It depends on the startup, but here are some of the common ones:</p>
+
+                    <p><em>Founder risk</em> -- does the startup have the right founding team?  A common founding team might include a great technologist, plus someone who can run the company, at least to start.  Is the technologist really all that?  Is the business person capable of running the company?  Is the business person missing from the team altogether?  Is it a business person or business people with no technologist, and therefore virtually unfundable?</p>
+
+                    <p><em>Market risk</em> -- is there a market for the product (using the term product and service interchangeably)?  Will anyone want it?  Will they pay for it?  How much will they pay?  How do we know?</p>
+
+                    <p><em>Competition risk</em> -- are there too many other startups already doing this?  Is this startup sufficiently differentiated from the other startups, and also differentiated from any large incumbents?</p>
+
+                    <p><em>Timing risk</em> -- is it too early?  Is it too late?</p>
+
+                    <p><em>Financing risk</em> -- after we invest in this round, how many additional rounds of financing will be required for the company to become profitable, and what will the dollar total be?  How certain are we about these estimates?  How do we know?</p>
+
+                    <p><em>Marketing risk</em> -- will this startup be able to cut through the noise?  How much will marketing cost?  Do the economics of customer acquisition -- the cost to acquire a customer, and the revenue that customer will generate -- work?</p>
+
+                    <p><em>Distribution risk</em> -- does this startup need certain distribution partners to succeed?  Will it be able to get them?  How?  (For example, this is a common problem with mobile startups that need deals with major mobile carriers to succeed.)</p>
+
+                    <p><em>Technology risk</em> -- can the product be built?  Does it involve rocket science -- or an equivalent, like artificial intelligence or natural language processing?  Are there fundamental breakthroughs that need to happen?  If so, how certain are we that they will happen, or that this team will be able to make them?</p>
+
+                    <p><em>Product risk</em> -- even assuming the product can in theory be built, can this team build it?</p>
+
+                    <p><em>Hiring risk</em> -- what positions does the startup need to hire for in order to execute its plan?  E.g. a startup planning to build a high-scale web service will need a VP of Operations -- will the founding team be able to hire a good one?</p>
+
+                    <p><em>Location risk</em> -- where is the startup located?  Can it hire the right talent in that location?  And will I as the VC need to drive more than 20 minutes in my Mercedes SLR McLaren to get there?</p>
+
+                    <p>You know, when you stack up all these layers and look at the full onion, you realize it's amazing that <em>any</em> venture investments ever get made.</p>
+
+                    <p>What you need to do is take a hard-headed look at each of these risks -- and any others that are specific to your startup and its category -- and put yourself in the VC's shoes: what could this startup do to minimize or eliminate enough of these risks to make the company fundable?</p>
+
+                    <p>Then do those things.</p>
+
+                    <p>This isn't very much fun, since it will probably involve making significant changes to your plan, but look on the bright side: it's excellent practice for when your company ultimately goes public and has to file an S1 registration statement with the SEC, in which you have to itemize in huge detail every conceivable risk and bad thing that could ever possibly happen to you, up to and including global warming.</p>
+
+                    <p><strong>Some ideas on reducing risk:</strong></p>
+
+                    <p><em>Founder risk</em> -- the tough one.  If you're the technologist on a founding team with a business person, you have to consider the possibility that the VCs don't think the business person is strong enough to be the founding CEO.  Or vice versa, maybe they think the technologist isn't strong enough to build the product.  You may have to swap out one or more founders, and/or add one or more founders.</p>
+
+                    <p>I put this one right up front because it can be a huge issue and the odds of someone being honest with you about it in the specific are not that high.</p>
+
+                    <p><em>Market risk</em> -- you probably need to validate the market, at a practical level.  Sometimes more detailed and analytical market research will solve the problem, but more often you actually need to go get some customers to demonstrate that the market exists.  Preferably, paying customers.  Or at least credible prospects who will talk to VCs to validate the market hypothesis.</p>
+
+                    <p><em>Competition risk</em> -- is your differentiation really sharp enough?  Rethink this one from the ground up.  Lots of startups do not have strong enough differentiation out of the gate, even after they get funded.  If you don't have a really solid idea as to how you're dramatically different from or advantaged over known and unknown competitors, you might not want to start a company in the first place.</p>
+
+                    <p>Two additional points on competition risk that founders routinely screw up in VC pitches:</p>
+
+                    <p>Never, ever say that you have no competitors.  That signals naivete.  Great markets draw competitors, and so if you really have no competition, you must not be in a great market.  Even if you really believe you have no competitors, create a competitive landscape slide with adjacent companies in related market segments and be ready to talk crisply about how you are like and unlike those adjacent companies.</p>
+
+                    <p>And never, ever say your market projections indicate you're going to be hugely successful if you get only 2% of your (extremely large) market.  That also signals naivete.  If you're going after 2% of a large market, that means the presumably larger companies that are going to take the other 98% are going to kill you.  You have to have a theory for how you're going to get a significantly higher market share than 2%.  (I pick 2% because that's the cliche, but if you're a VC, you've probably heard someone use it.)</p>
+
+                    <p><em>Timing risk</em> -- the only thing to do here is to make more progress, and demonstrate that you're not too early or too late.  Getting customers in the bag is the most valuable thing you can do on this one.</p>
+
+                    <p><em>Financing risk</em> -- rethink very carefully how much money you will need to raise after this round of financing, and try to change the plan in plausible ways to require less money.  For example, only serve Cristal at your launch party, and not <a href="http://web.archive.org/web/20100608100318/http://www.wallywine.com/ps-30500-451-remy-martin-cognac-the-black-pearl-louis-xiii-750ml.aspx">Remy Martin "Black Pearl" Louis XIII cognac</a>.</p>
+
+                    <p><em>Marketing risk</em> -- first, make sure your differentiation is super-sharp, because without that, you probably won't be able to stand out from the noise.</p>
+
+                    <p>Then, model out your customer acquisition economics in detail and make sure that you can show how you'll get more revenue from a customer than it will cost in sales and marketing expense to acquire that customer.  This is a common problem for startups pursuing the small business market, for example.</p>
+
+                    <p>If it turns out you need a lot of money in absolute terms for marketing, look for alternate approaches -- perhaps guerilla marketing, or some form of virality.</p>
+
+                    <p><em>Distribution risk</em> -- this is a very tough one -- if your plan has distribution risk, which is to say you need a key distribution partner to make it work, personally I'd recommend shelving the plan and doing something else.  Otherwise, you may need to go get the distribution deal before you can raise money, which is almost impossible.</p>
+
+                    <p><em>Technology risk</em> -- there's only one way around this, which is to build the product, or at least get it to beta, and then raise money.</p>
+
+                    <p><em>Product risk</em> -- same answer -- build it.</p>
+
+                    <p><em>Hiring risk</em> -- the best way to address this is to figure out which position/positions the VCs are worried about, and add it/them to the founding team.  This will mean additional dilution for you, but it's probably the only way to solve the problem.</p>
+
+                    <p><em>Location risk</em> -- this is the one you're really not going to like.  If you're not in a major center of entrepreneurialism and you're having trouble raising money, you probably need to move.  There's a reason why most films get made in Los Angeles, and there's a reason most venture-backed US tech startups happen in Silicon Valley and handful of other places -- that's where the money is.  You can start a company wherever you want, but you may not be able to get it funded there.</p>
+
+                    <p class="callout">You'll notice that a lot of what you may need to do is <em>kick the ball further down the road</em> -- make more progress against your plan before you raise venture capital.</p>
+
+                    <p>This obviously raises the issue of how you're supposed to do that before you've raised money.</p>
+
+                    <p>Try to raise angel money, or bootstrap off of initial customers or consulting contracts, or work on it after hours while keeping your current job, or quit your job and live off of credit cards for a while.</p>
+
+                    <p>Lots of entrepreneurs have done these things and succeeded -- and of course, many have failed.</p>
+
+                    <p>Nobody said this would be easy.</p>
+
+                    <p>The most valuable thing you can do is actually build your product.  When in doubt, focus on that.</p>
+
+                    <p>The next most valuable thing you can do is get customers -- or, for a consumer Internet service, establish a pattern of page view growth.</p>
+
+                    <p>The whole theory of venture capital is that VCs are investing in risk -- another term for venture capital is "risk capital" -- but the reality is that VCs will only take on so much risk, and the best thing you can do to optimize your chances of raising money is to take out risk.</p>
+
+                    <p>Peel away at the onion.</p>
+
+                    <p>Then, once you've done that, recraft the pitch around the new facts.  Go do the pitches again.  And repeat as necessary.</p>
+
+                    <p>And to end on a happy note, remember that "yes" can turn into "no" at any point up until the cash hits your company's bank account.</p>
+
+                    <p>So keep your options open all the way to the end.<br>
+                    </p>
+                </div>
+            </div>
+            <section class="chapter">
+                <div class="container">
+                    <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
+                    <h1 class="chapter__header">Chapter 3: <span class="indent">"But I don't know any VCs!"</span></h1>
+                    <p class="article__chapters">Jun 25, 2007</p>
+                </div>
+            </section>
+            <div class="article__body">
+                <div class="article__body-wrapper">
+                    <p>In my last post in this series, <em><a href="#chapter-2">When the VCs say "no"</a></em>, I discussed what to do once you have been turned down for venture funding for the first time.</p>
+                    <p>However, this presupposes you've been able to pitch VCs in the first place.  <strong>What if you have a startup for which you'd like to raise venture funding, but you don't know any VCs?</strong></p>
+                    <p>I can certainly sympathize with this problem -- when I was in college working on Mosaic at the University of Illinois, the term "venture capital" might as well have been "klaatu barada nikto" for all I knew.  I had never met a venture capitalist, no venture capitalist had ever talked to me, and I wouldn't have recognized one if I'd stumbled over his checkbook on the sidewalk.  Without Jim Clark, I'm not at all certain I would have been able to raise money to start a company like Netscape, had it even occured to me to start a company in the first place.</p>
+
+                    <p>The starting point for raising money from VCs when you don't know any VCs is to realize that <strong>VCs work mostly through referrals</strong> -- they hear about a promising startup or entrepreneur from someone they have worked with before, like another entrepreneur, an executive or engineer at one of the startups they have funded, or an angel investor with whom they have previously co-invested.</p>
+
+                    <p>The reason for this is simply the math: <strong>any individual VC can only fund a few companies per year</strong>, and for every one she funds, she probably meets with 15 or 20, and there are hundreds more that would like to meet with her that she doesn't possibly have time to meet with.  She has to rely on her network to help her screen the hundreds down to 15 or 20, so she can spend her time finding the right one out of the 15 or 20.</p>
+
+                    <p class="callout">Therefore, <strong>submitting a business plan "over the transom"</strong>, or unsolicited, to a venture firm is likely to amount to just as much as submitting a screenplay "over the transom" to a Hollywood talent agency -- that is, <strong>precisely nothing</strong>.</p>
+
+                    <p>So the primary trick becomes <strong>getting yourself into a position where you're one of the 15 or 20</strong> a particular venture capitalist is meeting with based on referrals from her network, not one of the hundreds of people who don't come recommended by anyone and whom she has no intention of meeting.</p>
+
+                    <p>But before you think about doing that, the first order of business is to (paraphrasing for a family audience) <strong>"have your stuff together"</strong> -- create and develop your plan, your presentation, and your supporting materials so that when you <em>do</em> meet with a VC, you impress her right out of the gate as bringing her a fundable startup founded by someone who knows what he -- that's you -- is doing.</p>
+
+                    <p>My recommendation is to read up on all the things you should do to put together a really effective business plan and presentation, and then pretend you have already been turned down once -- then go back to my <a href="#chapter-2">last post</a> and go through all the different things you should anticipate and fix before you actually do walk through the door.</p>
+
+                    <p>One of the reason VCs only meet with startups through their networks is because too many of the hundreds of other startups that they could meet with come across as amateurish and uninformed, and therefore not fundable, when they do take meetings with them.  So you have a big opportunity to cut through the noise by <strong>making a great first impression</strong> -- which requires really <strong>thinking things through ahead of time and doing all the hard work up front</strong> to really make your pitch and plan a masterpiece.</p>
+
+                    <p>Working backwards from <em>that</em>, the best thing you can walk in with is a <strong>working product</strong>.  Or, if you can't get to a working product without raising venture funding, then at least a beta or prototype of some form -- a web site that works but hasn't launched, or a software mockup with partial functionality, or <em>something</em>.  And of course it's even better if you walk in with existing "traction" of some form -- customers, beta customers, some evidence of adoption by Internet users, whatever is appropriate for your particular startup.</p>
+
+                    <p>With a working product that could be the foundation of a fundable startup, you have a much better chance of getting funded once you do get in the door.  Back to my rule of thumb from the <a href="http://web.archive.org/web/20100605114923/http://web.archive.org/web/20080229162701/http://blog.pmarca.com/2007/06/the_pmarca_guid_2.html">last post</a>: <strong>when in doubt, work on the product</strong>.</p>
+
+                    <p>Failing a working product and ideally customers or users, be sure to have <strong>as fleshed out a presentation</strong> as you possibly can -- including mockups, screenshots, market analyses, customer research such as interviews with real prospects, and the like.</p>
+
+                    <p><strong>Don't bother with a long detailed written business plan.</strong>  Most VCs will either fund a startup based on a fleshed out <strong>Powerpoint presentation of about 20 slides</strong>, or they won't fund it at all.  Corollary: any VC who requires a long detailed written business plan is probably not the right VC to be working with.</p>
+
+                    <p>Next: <strong>qualify, qualify, qualify</strong>.  Do extensive research on venture capitalists and find the ones who focus on the sector relevant to your startup.  It is completely counterproductive to everyone involved for you to pitch a health care VC on a consumer Internet startup, or vice versa.  Individual VCs are usually quite focused in the kinds of companies they are looking for, and identifying those VCs and screening out all the others is absolutely key.</p>
+
+                    <p><strong>Now, on to developing contacts:</strong></p>
+
+                    <p class="callout">The best way to develop contacts with VCs, in my opinion, is to work at a venture-backed startup, kick butt, get promoted, and network the whole way.</p>
+
+                    <p>If you can't get hired by a venture-backed startup right now, work at a well-regarded large tech company that employs a lot of people like Google or Apple, gain experience, and <em>then</em> go to work at a venture-backed startup, kick butt, get promoted, and network the whole way.</p>
+
+                    <p>And if you can't get hired by a well-regarded large tech company, go get a bachelor's or master's degree at a major research university from which well-regarded large tech companies regularly recruit, then work at a well-regarded large tech company that employs a lot of people like Google or Apple, gain experience, and <em>then</em> go to work at a venture-backed startup, kick butt, get promoted, and network the whole way.</p>
+
+                    <p>I sound like I'm joking, but I'm completely serious -- this is the path taken by many venture-backed entrepreneurs I know.</p>
+
+                    <p><strong>Some alternate techniques that don't take quite as long:</strong></p>
+
+                    <p>If you're still in school, <strong>immediately transfer to, or plan on going to graduate school at, a large research university</strong> with well-known connections to the venture capital community, like Stanford or MIT.</p>
+
+                    <p>Graduate students at Stanford are directly responsible for such companies as Sun, Cisco, Yahoo, and Google, so needless to say, Silicon Valley VCs are continually on the prowl on the Stanford engineering campus for the next Jerry Yang or Larry Page.</p>
+
+                    <p>(In contrast, the University of Illinois, where I went to school, is mostly prowled by mutant cold-weather cows.)</p>
+
+                    <p>Alternately, <strong>jump all over Y Combinator</strong>.  This program, created by entrepreneur Paul Graham and his partners, funds early-stage startups in an organized program in Silicon Valley and Boston and then makes sure the good ones get in front of venture capitalists for follow-on funding.  It's a great idea and a huge opportunity for the people who participate in it.</p>
+
+                    <p><strong>Read VC blogs</strong> -- read them all, and read them very very carefully.  VCs who blog are doing entrepreneurs a huge service both in conveying highly useful information as well as frequently putting themselves out there to be contacted by entrepreneurs in various ways including email, comments, and even uploaded podcasts.  Each VC is different in terms of how she wants to engage with people online, but by all means read as many VC blogs as you can and interact with as many of them as you can in appropriate ways.</p>
+
+                    <p>See the list of VC bloggers on <a href="http://web.archive.org/web/20100605114923/http://web.archive.org/web/20080229162701/http://blog.pmarca.com/">my home page</a>, as well as on the home pages of various of those bloggers.</p>
+
+                    <p>At the very least you will start to get a really good sense of which VCs who blog are interested in which kinds of companies.</p>
+
+                    <p class="callout">At best, a VC blogger may encourage her readers to communicate with her in various ways, including soliciting email pitches in certain startup categories of interest to her.</p>
+
+                    <p><a href="http://web.archive.org/web/20100605114923/http://avc.blogs.com/a_vc/">Fred Wilson</a> of Union Square Ventures has even gone so far as to encourage entrepreneurs to record and upload audio pitches for new ventures so he can listen to them on his IPod.  I don't know if he's still doing that, but it's worth reading his blog and finding out.</p>
+
+                    <p>Along those lines, some VCs are aggressive early adopters of new forms of communication and interaction -- current examples being Facebook and Twitter.  Observationally, when a VC is exploring a new communiation medium like Facebook or Twitter, she can be more interested in interacting with various people over that new medium than she might otherwise be.  So, when such a new thing comes out -- like, hint hint, Facebook or Twitter -- <strong>jump all over it</strong>, see which VCs are using it, and interact with them that way -- sensibly, of course.</p>
+
+                    <p>More generally, <strong>it's a good idea for entrepreneurs who are looking for funding to blog</strong> -- about their startup, about interesting things going on, about their point of view.  This puts an entrepreneur in the flow of conversation, which can lead to interaction with VCs through the normal medium of blogging.  And, when a VC does decide to take a look at you and your company, she can read your blog to get a sense of who you are and how you think.  It's another great opportunity to put forward a fantastic first impression.</p>
+
+                    <p>Finally, if you are a programmer, I <em>highly</em> encourage you, if you have time, to <strong>create or contribute to a meaningful open source project</strong>.  The open source movement is an amazing opportunity for programmers all over the world to not only build useful software that lots of people can use, but also build their own reputations completely apart from whatever day jobs they happen to have.  Being able to email a VC and say, "I'm the creator of open source program X which has 50,000 users worldwide, and I want to tell you about my new startup" is a lot more effective than your normal pitch.</p>
+
+                    <p>If you engage in a set of these techniques over time, you <em>should</em> be able to interact with at least a few VCs in ways that they find useful and that might lead to further conversations about funding, or even introductions to other VCs.</p>
+
+                    <p>I'm personally hoping that the next Google comes out of a VC being sent an email pitch after the entrepreneur read that VC's blog.  Then every VC on the planet will suddenly start blogging, overnight.</p>
+
+                    <p><strong>If none of those ideas work for you:</strong></p>
+
+                    <p>Your alternatives in reverse (declining) order of preference for funding are, in my view: <strong>angel funding, bootstrapping via consulting contracts or early customers, keeping your day job and working on your startup in your spare time, and credit card debt</strong>.</p>
+
+                    <p>Angel funding -- funding from individuals who like to invest small amounts of money in early-stage startups, often before VCs come in -- can be a great way to go since good angels know good VCs and will be eager to introduce you to them so that your company goes on to be successful for the angel as well as for you.</p>
+
+                    <p>This of course begs the question of how to raise angel money, which is another topic altogether!</p>
+
+                    <p><strong>I am not encouraging the other three alternatives</strong> -- bootstrapping, working on it part time, or credit card debt.  Each has serious problems.  But, it is easy to name highly successful entrepreneurs who have followed each of those paths, so they are worth noting.</p>
+
+                    <p><strong>Closing link:</strong></p>
+
+                    <p>Finally, <strong>be sure to read <a href="http://web.archive.org/web/20100605114923/http://www.sequoiacap.com/ideas/">this page</a> on Sequoia Capital's web site</strong>.</p>
+
+                    <p>Sequoia is one of the very best venture firms in the world, and has funded many companies that you have heard of including Oracle, Apple, Yahoo, and Google.</p>
+
+                    <p>On <a href="http://web.archive.org/web/20100605114923/http://www.sequoiacap.com/ideas/">that page</a>, Sequoia does entrepreneurs everywhere a huge service by first listing the criteria that they look for in a startup, then the recommended structure for your pitch presentation, and then finally actually asks for pitches "over the transom".</p>
+
+                    <p>I have not done a thorough review of other VC web sites to see who else is being this open, but for Sequoia to be offering this to the world at large is a huge opportunity for the right startup.  Don't let it pass by.</p>
+
+                    <p><em>[Editorial note: This will be the last VC-related post in this series for a while.  From now on I plan to focus much more on how to make a startup successful.]</em><br>
+                    </p>
+                </div>
+            </div>
+            <section class="chapter">
+                <div class="container">
+                    <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
+                    <h1 class="chapter__header">Chapter 4: <span class="indent">The only thing that matters</span></h1>
+                    <p class="article__chapters">Jun 25, 2007</p>
+                </div>
+            </section>
+            <div class="article__body">
+                <div class="article__body-wrapper">
+                    <p>This post is all about the only thing that matters for a new startup.</p>
+
+                    <p>But first, some theory:</p>
+
+                    <p>If you look at a broad cross-section of startups -- say, 30 or 40 or more; enough to screen out the pure flukes and look for patterns -- two obvious facts will jump out at you.</p>
+
+                    <p>First obvious fact: there is an incredibly wide divergence of success -- some of those startups are insanely successful, some highly successful, many somewhat successful, and quite a few of course outright fail.</p>
+
+                    <p>Second obvious fact: there is an incredibly wide divergence of caliber and quality for the three core elements of each startup -- <em>team</em>, <em>product</em>, and <em>market</em>.</p>
+
+                    <p>At any given startup, the team will range from outstanding to remarkably flawed; the product will range from a masterpiece of engineering to barely functional; and the market will range from booming to comatose.</p>
+
+                    <p>And so you start to wonder -- what correlates the most to success -- <em>team</em>, <em>product</em>, or <em>market</em>?  Or, more bluntly, <strong>what causes success?</strong>  And, for those of us who are students of startup failure -- <strong>what's most dangerous: a bad team, a weak product, or a poor market?</strong></p>
+
+                    <p>Let's start by defining terms.</p>
+
+                    <p><strong>The caliber of a startup <em>team</em></strong> can be defined as the suitability of the CEO, senior staff, engineers, and other key staff relative to the opportunity in front of them.</p>
+
+                    <p>You look at a startup and ask, will this team be able to optimally execute against their opportunity?  I focus on effectiveness as opposed to experience, since the history of the tech industry is full of highly successful startups that were staffed primarily by people who had never "done it before".</p>
+
+                    <p><strong>The quality of a startup's <em>product</em></strong> can be defined as how impressive the product is to one customer or user who actually uses it: How easy is the product to use?  How feature rich is it?  How fast is it?  How extensible is it?  How polished is it?  How many (or rather, how few) bugs does it have?</p>
+
+                    <p><strong>The size of a startup's <em>market</em></strong> is the the number, and growth rate, of those customers or users for that product.</p>
+
+                    <p>(Let's assume for this discussion that you can make money at scale -- that the cost of acquiring a customer isn't higher than the revenue that customer will generate.)</p>
+
+                    <p class="callout">Some people have been objecting to my classification as follows: "How great can a product be if nobody wants it?"  In other words, isn't the quality of a product defined by how appealing it is to lots of customers?</p>
+
+                    <p>No.  Product quality and market size are completely different.</p>
+
+                    <p>Here's the classic scenario: the world's best software application for an operating system nobody runs.  Just ask any software developer targeting the market for BeOS, Amiga, OS/2, or NeXT applications what the difference is between great product and big market.</p>
+
+                    <p><strong>So:</strong></p>
+
+                    <p>If you ask entrepreneurs or VCs which of <em>team</em>, <em>product</em>, or <em>market</em> is most important, many will say <em>team</em>.  This is the obvious answer, in part because in the beginning of a startup, you know a lot more about the team than you do the product, which hasn't been built yet, or the market, which hasn't been explored yet.</p>
+
+                    <p>Plus, we've all been raised on slogans like "people are our most important asset" -- at least in the US, pro-people sentiments permeate our culture, ranging from high school self-esteem programs to the Declaration of Independence's inalienable rights to life, liberty, and the pursuit of happiness -- so the answer that team is the most important <em>feels</em> right.</p>
+
+                    <p>And who wants to take the position that people don't matter?</p>
+
+                    <p>On the other hand, if you ask engineers, many will say <em>product</em>.  This is a product business, startups invent products, customers buy and use the products.  Apple and Google are the best companies in the industry today because they build the best products.  Without the product there is no company.  Just try having a great team and no product, or a great market and no product.  What's wrong with you?  Now let me get back to work on the product.</p>
+
+                    <p class="callout">Personally, I'll take the third position -- I'll assert that <em>market</em> is the most important factor in a startup's success or failure.</p>
+
+                    <p>Why?</p>
+
+                    <p><strong>In a great market -- a market with lots of real potential customers -- the market <em>pulls</em> product out of the startup.</strong></p>
+
+                    <p>The market needs to be fulfilled and the market <em>will</em> be fulfilled, by the first viable product that comes along.</p>
+
+                    <p>The product doesn't need to be great; it just has to basically work.  And, the market doesn't care how good the team is, as long as the team can produce that viable product.</p>
+
+                    <p>In short, customers are knocking down your door to get the product; the main goal is to actually answer the phone and respond to all the emails from people who want to buy.</p>
+
+                    <p>And when you have a great market, the team is remarkably easy to upgrade on the fly.</p>
+
+                    <p>This is the story of search keyword advertising, and Internet auctions, and TCP/IP routers.</p>
+
+                    <p><strong>Conversely, in a terrible market, you can have the best product in the world and an absolutely killer team, and it doesn't matter -- <em>you're going to fail</em>.</strong></p>
+
+                    <p>You'll break your pick for years trying to find customers who don't exist for your marvelous product, and your wonderful team will eventually get demoralized and quit, and your startup will die.</p>
+
+                    <p>This is the story of videoconferencing, and workflow software, and micropayments.</p>
+
+                    <p>In honor of Andy Rachleff, formerly of Benchmark Capital, who crystallized this formulation for me, let me present <em>Rachleff's Law of Startup Success</em>:</p>
+
+                    <p><em><strong>The #1 company-killer is lack of market.</strong></em></p>
+
+                    <p>Andy puts it this way:</p>
+
+                    <ul>
+                        <li>When a great team meets a lousy market, market wins.</li>
+                        <li>When a lousy team meets a great market, market wins.</li>
+                        <li>When a great team meets a great market, something special happens.</li>
+                    </ul>
+
+                    <p>You can obviously screw up a great market -- and that has been done, and not infrequently -- but assuming the team is baseline competent and the product is fundamentally acceptable, a great market will tend to equal success and a poor market will tend to equal failure.  <strong>Market matters most</strong>.</p>
+
+                    <p>And neither a stellar team nor a fantastic product will redeem a bad market.</p>
+
+                    <p>OK, so what?</p>
+
+                    <p class="callout">Well, first question: Since team is the thing you have the most control over at the start, and everyone wants to have a great team, what does a great team actually get you?</p>
+
+                    <p>Hopefully a great team gets you at least an OK product, and ideally a great product.</p>
+
+                    <p>However, I can name you a bunch of examples of great teams that totally screwed up their products.  Great products are really, really hard to build.</p>
+
+                    <p>Hopefully a great team also gets you a great market -- but I can also name you lots of examples of great teams that executed brilliantly against terrible markets and failed.  <em>Markets that don't exist don't care how smart you are.</em></p>
+
+                    <p>In my experience, the most frequent case of great team paired with bad product and/or terrible market is the second- or third-time entrepreneur whose first company was a huge success.  People get cocky, and slip up.  There is one high-profile, highly successful software entrepreneur right now who is burning through something like $80 million in venture funding in his latest startup and has practically nothing to show for it except for some great press clippings and a couple of beta customers -- because there is virtually no market for what he is building.</p>
+
+                    <p>Conversely, I can name you any number of weak teams whose startups were highly successful due to explosively large markets for what they were doing.</p>
+
+                    <p>Finally, to quote Tim Shephard: "A great team is a team that will always beat a mediocre team, given the same market and product."</p>
+
+                    <p class="callout">Second question: Can't great products sometimes create huge new markets?</p>
+
+                    <p>Absolutely.</p>
+
+                    <p>This is a best case scenario, though.</p>
+
+                    <p>VMWare is the most recent company to have done it -- VMWare's product was so profoundly transformative out of the gate that it catalyzed a whole new movement toward operating system virtualization, which turns out to be a monster market.</p>
+
+                    <p>And of course, in this scenario, it also doesn't really matter how good your team is, as long as the team is good enough to develop the product to the baseline level of quality the market requires and get it fundamentally to market.</p>
+
+                    <p><em>Understand I'm not saying that you should shoot low in terms of quality of team</em>, or that VMWare's team was not incredibly strong -- it was, and is.  I'm saying, <em>bring a product as transformative as VMWare's to market and you're going to succeed</em>, full stop.</p>
+
+                    <p>Short of that, I wouldn't count on your product creating a new market from scratch.</p>
+
+                    <p><strong>Third question: as a startup founder, what should I do about all this?</strong></p>
+
+                    <p>Let's introduce <em>Rachleff's Corollary of Startup Success:</em></p>
+
+                    <p><em><strong>The only thing that matters is getting to product/market fit.</strong></em></p>
+
+                    <p>Product/market fit means being in a good market with a product that can satisfy that market.</p>
+
+                    <p><em>You can always feel when product/market fit isn't happening.</em>  The customers aren't quite getting value out of the product, word of mouth isn't spreading, usage isn't growing that fast, press reviews are kind of "blah", the sales cycle takes too long, and lots of deals never close.</p>
+
+                    <p><em>And you can always feel product/market fit when it's happening.</em>  The customers are buying the product just as fast as you can make it -- or usage is growing just as fast as you can add more servers.  Money from customers is piling up in your company checking account.  You're hiring sales and customer support staff as fast as you can.  Reporters are calling because they've heard about your hot new thing and they want to talk to you about it.  You start getting entrepreneur of the year awards from Harvard Business School.  Investment bankers are staking out your house.  You could eat free for a year at Buck's.</p>
+
+                    <p><strong>Lots of startups fail before product/market fit ever happens.</strong></p>
+
+                    <p>My contention, in fact, is that they fail <em>because</em> they never get to product/market fit.</p>
+
+                    <p>Carried a step further, I believe that the life of any startup can be divided into two parts: <em>before product/market fit</em> (call this "BPMF") and <em>after product/market fit</em> ("APMF").</p>
+
+                    <p><strong>When you are BPMF, focus obsessively on getting to product/market fit.</strong></p>
+
+                    <p><strong>Do whatever is required to get to product/market fit.</strong>  Including changing out people, rewriting your product, moving into a different market, telling customers no when you don't want to, telling customers yes when you don't want to, raising that fourth round of highly dilutive venture capital -- whatever is required.</p>
+
+                    <p>When you get right down to it, you can ignore almost everything else.</p>
+
+                    <p>I'm not suggesting that you <em>do</em> ignore everything else -- just that judging from what I've seen in successful startups, you <em>can</em>.</p>
+
+                    <p><strong>Whenever you see a successful startup, you see one that has reached product/market fit</strong> -- and usually along the way screwed up all kinds of other things, from channel model to pipeline development strategy to marketing plan to press relations to compensation policies to the CEO sleeping with the venture capitalist.  And the startup is still successful.</p>
+
+                    <p>Conversely, you see a surprising number of <strong>really well-run startups</strong> that have all aspects of operations completely buttoned down, HR policies in place, great sales model, thoroughly thought-through marketing plan, great interview processes, outstanding catered food, 30" monitors for all the programmers, top tier VCs on the board -- <strong>heading straight off a cliff due to not ever finding product/market fit</strong>.</p>
+
+                    <p>Ironically, once a startup is successful, and you ask the founders what made it successful, they will usually cite all kinds of things that had nothing to do with it.  People are terrible at understanding causation.  But in almost every case, the cause was actually product/market fit.</p>
+
+                    <p>Because, really, what else could it possibly be?</p>
+
+                    <p><em>[Editorial note: this post obviously raises way more questions than it answers.  How exactly do you go about getting to product/market fit if you don't hit it right out of the gate?  How do you evaluate markets for size and quality, especially before they're fully formed?  What actually makes a product "fit" a market?  What role does timing play?  How do you know when to change strategy and go after a different market or build a different product?  When do you need to change out some or all of your team?  And why can't you count on on a great team to build the right product and find the right market?  All these topics will be discussed in future posts in this series.]</em><br>
+                    </p>
+                </div>
+            </div>
+            <section class="chapter">
+                <div class="container">
+                    <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
+                    <h1 class="chapter__header">Chapter 5: <span class="indent">The Moby Dick theory of big companies</span></h1>
+                    <p class="article__chapters">Jun 27, 2007</p>
+                </div>
+            </section>
+            <div class="article__body">
+                <div class="article__body-wrapper">
+                    <blockquote>
+                        <p>"There she blows," was sung out from the mast-head.</p>
+
+                        <p>"Where away?" demanded the captain.</p>
+
+                        <p>"Three points off the lee bow, sir."</p>
+
+                        <p>"Raise up your wheel. Steady!" "Steady, sir."</p>
+
+                        <p>"Mast-head ahoy! Do you see that whale now?"</p>
+
+                        <p>"Ay ay, sir! A shoal of Sperm Whales! There she blows! There she breaches!"</p>
+
+                        <p>"Sing out! sing out every time!"</p>
+
+                        <p>"Ay Ay, sir! There she blows! there -- there -- THAR she blows -- bowes -- bo-o-os!"</p>
+
+                        <p>"How far off?"</p>
+
+                        <p>"Two miles and a half."</p>
+
+                        <p>"Thunder and lightning! so near! Call all hands."</p>
+
+                        <p><strong>-- J. Ross Browne's Etchings of a Whaling Cruize, 1846</strong></p>
+                    </blockquote>
+                    <p>There are times in the life of a startup when you have to deal with big companies.</p>
+
+                    <p>Maybe you're looking for a partnership or distribution deal. Perhaps you want an investment. Sometimes you want a marketing or sales alliance. From time to time you need a big company's permission to do something. Or maybe a big company has approached you and says it wants to buy your startup.</p>
+
+                    <p class="callout">The most important thing you need to know going into any discussion or interaction with a big company is that you're Captain Ahab, and the big company is Moby Dick.</p>
+                    <blockquote>
+                        <p>"Scarcely had we proceeded two days on the sea, when about sunrise a great many Whales and other monsters of the sea, appeared. Among the former, one was of a most monstrous size. ... This came towards us, open-mouthed, raising the waves on all sides, and beating the sea before him into a foam."</p>
+
+                        <p><strong>-- Tooke's Lucian, "The True History"</strong></p>
+                    </blockquote>
+                    <p>When Captain Ahab went in search of the great white whale Moby Dick, he had absolutely no idea whether he would find Moby Dick, whether Moby Dick would allow himself to be found, whether Moby Dick would try to immediately capsize the ship or instead play cat and mouse, or whether Moby Dick was off mating with his giant whale girlfriend.</p>
+
+                    <p>What happened was entirely up to Moby Dick.</p>
+
+                    <p>And Captain Ahab would never be able explain to himself or anyone else why Moby Dick would do whatever it was he'd do.</p>
+
+                    <p>You're Captain Ahab, and the big company is Moby Dick.</p>
+
+                    <blockquote>
+                        <p>"Clap eye on Captain Ahab, young man, and thou wilt find that he has only one leg."</p>
+
+                        <p>"What do you mean, sir? Was the other one lost by a whale?"</p>
+
+                        <p>"Lost by a whale! Young man, come nearer to me: it was devoured, chewed up, crunched by the monstrousest parmacetty that ever chipped a boat! -- ah, ah!"</p>
+
+                        <p><strong>-- Moby Dick</strong></p>
+                    </blockquote>
+                    <p>Here's why:</p>
+
+                    <p>The behavior of any big company is largely inexplicable when viewed from the outside.</p>
+
+                    <p>I always laugh when someone says, "Microsoft is going to do X", or "Google is going to do Y", or "Yahoo is going to do Z".</p>
+
+                    <p>Odds are, nobody <em>inside</em> Microsoft, Google, or Yahoo knows what Microsoft, Google, or Yahoo is going to do in any given circumstance on any given issue.</p>
+
+                    <p>Sure, maybe the CEO knows, if the issue is really big, but you're probably not dealing at the CEO level, and so that doesn't matter.</p>
+
+                    <p>The inside of any big company is a very, very complex system consisting of many thousands of people, of whom at least hundreds and probably thousands are executives who think they have some level of decision-making authority.</p>
+
+                    <p>On any given issue, many people inside the company are going to get some kind of vote on what happens -- maybe 8 people, maybe 10, 15, 20, sometimes many more.</p>
+
+                    <p>When I was at IBM in the early 90's, they had a formal decision making process called "concurrence" -- on any given issue, a written list of the 50 or so executives from all over the company who would be affected by the decision in any way, no matter how minor, would be assembled, and any one of those executives could "nonconcur" and veto the decision. That's an extreme case, but even a non-extreme version of this process -- and all big companies have one; they have to -- is mind-bendingly complex to try to understand, even from the inside, let alone the outside.</p>
+
+                    <blockquote>
+                        <p>"... and the breath of the whale is frequently attended with such an insupportable smell, as to bring on a disorder of the brain."</p>
+
+                        <p><strong>-- Ulloa's South America</strong></p>
+                    </blockquote>
+
+                    <p class="callout">You can count on there being a whole host of impinging forces that will affect the dynamic of decision-making on any issue at a big company.</p>
+
+                    <p>The consensus building process, trade-offs, quids pro quo, politics, rivalries, arguments, mentorships, revenge for past wrongs, turf-building, engineering groups, product managers, product marketers, sales, corporate marketing, finance, HR, legal, channels, business development, the strategy team, the international divisions, investors, Wall Street analysts, industry analysts, good press, bad press, press articles being written that you don't know about, customers, prospects, lost sales, prospects on the fence, partners, this quarter's sales numbers, this quarter's margins, the bond rating, the planning meeting that happened last week, the planning meeting that got cancelled this week, bonus programs, people joining the company, people leaving the company, people getting fired by the company, people getting promoted, people getting sidelined, people getting demoted, who's sleeping with whom, which dinner party the CEO went to last night, the guy who prepares the Powerpoint presentation for the staff meeting accidentally putting your startup's name in too small a font to be read from the back of the conference room...</p>
+
+                    <p>You can't possibly even identify all the factors that will come to bear on a big company's decision, much less try to understand them, much less try to influence them very much at all.</p>
+
+                    <blockquote>
+                        <p>"The larger whales, whalers seldom venture to attack. They stand in so great dread of some of them, that when out at sea they are afraid to mention even their names, and carry dung, lime-stone, juniper-wood, and some other articles of the same nature in their boats, in order to terrify and prevent their too near approach."</p>
+
+                        <p><strong>-- Uno Von Troil's Letters on Banks's and Solander's Voyage to Iceland In 1772</strong></p>
+                    </blockquote>
+
+                    <p>Back to Moby Dick.</p>
+                    <p>Moby Dick might stalk you for three months, then jump out of the water and raise a huge ruckus, then vanish for six months, then come back and beach your whole boat, or alternately give you the clear shot you need to harpoon his giant butt.</p>
+
+                    <p>And you're never going to know why.</p>
+
+                    <p>A big company might study you for three months, then approach you and tell you they want to invest in you or partner with you or buy you, then vanish for six months, then come out with a directly competitive product that kills you, or alternately acquire you and make you and your whole team rich.</p>
+
+                    <p>And you're never going to know why.</p>
+
+                    <p>The upside of dealing with a big company is that there's potentially a ton of whale meat in it for you.</p>
+
+                    <p>Sorry, mixing my metaphors. The right deal with the right big company can have a <em>huge</em> impact on a startup's success.</p>
+
+                    <blockquote>
+                        <p>"And what thing soever besides cometh within the chaos of this monster's mouth, be it beast, boat, or stone, down it goes all incontinently that foul great swallow of his, and perisheth in the bottomless gulf of his paunch."</p>
+
+                        <p><strong>-- Holland's Plutarch's Morals</strong></p>
+                    </blockquote>
+
+                    <p>The downside of dealing with a big company is that he can capsize you -- maybe by stepping on you in one way or another and killing you, but more likely by wrapping you up in a bad partnership that ends up holding you back, or just making you waste a huge amount of time in meetings and get distracted from your core mission.</p>
+
+                    <p>So what to do?</p>
+
+                    <p><strong>First</strong>, don't do startups that require deals with big companies to make them successful.</p>
+
+                    <p>The risk of never getting those deals is way too high, no matter how hard you are willing to work at it.</p>
+
+                    <p>And even if you get the deals, they probably won't work out the way you hoped.</p>
+
+                    <blockquote>
+                        <p>"'Stern all!' exclaimed the mate, as upon turning his head, he saw the distended jaws of a large Sperm Whale close to the head of the boat, threatening it with instant destruction; -- 'Stern all, for your lives!'"</p>
+
+                        <p><strong>-- Wharton the Whale Killer</strong></p>
+                    </blockquote>
+
+                    <p><strong>Second</strong>, never assume that a deal with a big company is closed until the ink hits the paper and/or the cash hits the company bank account.</p>
+
+                    <p>There is always something that can cause a deal that looks like it's closed, to suddenly get blown to smithereens -- or vanish without a trace.</p>
+
+                    <blockquote>
+                        <p>At day-break, the three mast-heads were punctually manned afresh.</p>
+
+                        <p>"D'ye see him?" cried Ahab after allowing a little space for the light to spread.</p>
+
+                        <p>"See nothing, sir."</p>
+
+                        <p><strong>-- Moby Dick</strong></p>
+                    </blockquote>
+
+                    <p><strong>Third</strong>, be extremely patient.</p>
+
+                    <p>Big companies play "hurry up and wait" all the time. In the last few years I've dealt with one big East Coast technology company in particular that has played "hurry up and wait" with me at least four separate times -- including a mandatory immediate cross-country flight just to have dinner with the #2 executive -- and has never followed through on anything.</p>
+
+                    <p>If you want a deal with a big company, it is probably going to take a lot longer to put together than you think.</p>
+
+                    <blockquote>
+                        <p>"My God! Mr. Chace, what is the matter?" I answered, "we have been stove by a whale."</p>
+
+                        <p><strong>-- "Narrative of the Shipwreck of the Whale Ship Essex of Nantucket, Which Was Attacked and Finally Destroyed by a Large Sperm Whale in the Pacific Ocean" by Owen Chace of Nantucket, First Mate of Said Vessel, New York, 1821</strong></p>
+                    </blockquote>
+
+                    <p><strong>Fourth</strong>, beware bad deals.</p>
+
+                    <p>I am thinking of one high-profile Internet startup in San Francisco right now that is extremely promising, has great technology and a unique offering, that did two big deals early with high-profile big company partners, and has become completely hamstrung in its ability to execute on its core business as a result.</p>
+
+                    <p><strong>Fifth</strong>, never, ever assume a big company will do the obvious thing.</p>
+
+                    <p>What is obvious to you -- or any outsider -- is probably not obvious on the inside, once all the other factors that are involved are taken into account.</p>
+
+                    <p><strong>Sixth</strong>, be aware that big companies care a lot more about what other big companies are doing than what any startup is doing.</p>
+
+                    <p>Hell, big companies often care a lot more about what other big companies are doing than they care about what their customers are doing.</p>
+
+                    <p>Moby Dick cared a lot more about what the other giant white whales were doing than those annoying little people in that flimsy boat.</p>
+
+                    <blockquote>
+                        <p>"The Whale is harpooned to be sure; but bethink you, how you would manage a powerful unbroken colt, with the mere appliance of a rope tied to the root of his tail."</p>
+
+                        <p><strong>-- A Chapter on Whaling in Ribs and Trucks</strong></p>
+                    </blockquote>
+
+                    <p><strong>Seventh</strong>, if doing deals with big companies is going to be a key part of your strategy, be sure to hire a real pro who has done it before.</p>
+
+                    <p>Only the best and most experienced whalers had a chance at taking down Moby Dick.</p>
+
+                    <p>This is why senior sales and business development people get paid a lot of money. They're worth it.</p>
+
+                    <blockquote>
+                        <p>"Oh! Ahab," cried Starbuck, "not too late is it, even now, the third day, to desist. See! Moby Dick seeks thee not. It is thou, thou, that madly seekest him!"</p>
+
+                        <p><strong>-- Moby Dick</strong></p>
+                    </blockquote>
+
+                    <p><strong>Eighth</strong>, don't get obsessed.</p>
+
+                    <p>Don't turn into Captain Ahab.</p>
+
+                    <p>By all means, talk to big companies about all kinds of things, but always be ready to have the conversation just drop and to return to your core business.</p>
+
+                    <p>Rare is the startup where a deal with a big company leads to success, or lack thereof leads to huge failure.</p>
+
+                    <p>(However, see also Microsoft and Digital Research circa 1981. Talk about a huge whale.)</p>
+
+                    <p>Closing thought:</p>
+
+                    <blockquote>
+                        <p>Diving beneath the settling ship, the whale ran quivering along its keel; but turning under water, swiftly shot to the surface again, far off the other bow, but within a few yards of Ahab's boat, where, for a time, the whale lay quiescent.</p>
+
+                        <p>"...Towards thee I roll, thou all-destroying but unconquering whale; to the last I grapple with thee; from hell's heart I stab at thee; for hate's sake I spit my last breath at thee. Sink all coffins and all hearses to one common pool! and since neither can be mine, let me then tow to pieces, while still chasing thee, though tied to thee, thou damned whale! THUS, I give up the spear!"</p>
+
+                        <p>The harpoon was darted; the stricken whale flew forward; with igniting velocity the line ran through the grooves; -- ran foul. Ahab stooped to clear it; he did clear it; but the flying turn caught him round the neck, and voicelessly as Turkish mutes bowstring their victim, he was shot out of the boat, ere the crew knew he was gone.</p>
+
+                        <p><strong>-- Moby Dick</strong></p>
+                    </blockquote>
+                </div>
+            </div>
+            <section class="chapter">
+                <div class="container">
+                    <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
+                    <h1 class="chapter__header">Chapter 6: <span class="indent">How much funding is too little? Too much?</span></h1>
+                    <p class="article__chapters">Jul 3, 2007</p>
+                </div>
+            </section>
+            <div class="article__body">
+                <div class="article__body-wrapper">
+                    <p>In this post, I answer these questions:</p>
+
+                    <p><em>How much funding for a startup is too little?</em></p>
+
+                    <p><em>How much funding for a startup is too much?</em></p>
+
+                    <p><em>And how can you know, and what can you do about it?</em></p>
+
+                    <p><br>
+                    The first question to ask is, <strong>what is the <em>correct</em>, or appropriate, amount of funding for a startup?</strong></p>
+
+                    <p>The answer to that question, in my view, is based my <a href="http://web.archive.org/web/20100526042228/http://web.archive.org/web/20080229063627/http://blog.pmarca.com/2007/06/the-pmarca-gu-2.html">theory</a> that a startup's life can be divided into two parts -- <em>Before Product/Market Fit</em>, and <em>After Product/Market Fit</em>.</p>
+
+                    <p><strong>Before Product/Market Fit</strong>, a startup should ideally raise at least enough money to get to Product/Market Fit.</p>
+
+                    <p><strong>After Product/Market Fit</strong>, a startup should ideally raise at least enough money to fully exploit the opportunity in front of it, and then to get to profitability while still fully exploiting that opportunity.</p>
+
+                    <p>I will further argue that the definition of "at least enough money" in each case should include <strong>a substantial amount of extra money beyond your default plan</strong>, so that you can withstand bad surprises.  In other words, <em>insurance</em>.  This is particularly true for startups that have not yet achieved Product/Market Fit, since you have no real idea how long that will take.</p>
+
+                    <p>These answers all sound obvious, but in my experience, a surprising number of startups go out to raise funding and do not have an underlying theory of how much money they are raising and for precisely what purpose they are raising it.</p>
+
+                    <p><br>
+                    <strong>What if you can't raise that much money at once?</strong></p>
+
+                    <p>Obviously, many startups find that they cannot raise enough money at one time to accomplish these objectives -- but I believe this is <strong>still the correct underlying theory</strong> for how much money a startup should raise and around which you should orient your thinking.</p>
+
+                    <p><strong>If you are Before Product/Market Fit and you can't raise enough money in one shot to get to Product/Market Fit</strong>, then you will need get as far as you can on each round and demonstrate progress towards Product/Market Fit when you raise each new round.</p>
+
+                    <p><strong>If you are After Product/Market Fit and you can't raise enough money in one shot to fully exploit your opportunity</strong>, you have a high-class problem and will probably -- but not definitely -- find that it gets continually easier to raise new money as you need it.</p>
+
+                    <p><br>
+                    <strong>What if you don't want to raise that much money at once?</strong></p>
+
+                    <p>You can argue you should raise a smaller amount of money at a time, because if you are making progress -- either BPMF or APMF -- you can raise the rest of the money you need later, at a higher valuation, and give away less of the company.</p>
+
+                    <p>This is the reason some entrepreneurs who <i>can</i> raise a lot of money choose to hold back.</p>
+
+                    <p>Here's why you shouldn't do that:</p>
+
+                    <p><br>
+                    <strong>What are the consequences of not raising enough money?</strong></p>
+
+                    <p>Not raising enough money risks the survival of your company, for the following reasons:</p>
+
+                    <p><strong>First, you may have -- and probably will have -- unanticipated setbacks within your business.</strong></p>
+
+                    <p>Maybe a new product release slips, or you have unexpected quality issues, or one of your major customers goes bankrupt, or a challenging new competitor emerges, or you get sued by a big company for patent infringement, or you lose a key engineer.</p>
+
+                    <p><strong>Second, the funding window may not be open when you need more money.</strong></p>
+
+                    <p>Sometimes investors are highly enthusiastic about funding new businesses, and sometimes they're just not.</p>
+
+                    <p>When they're not -- when the "window is shut", as the saying goes -- it is very hard to convince them otherwise, even though those are many of the best times to invest in startups because of the prevailing atmosphere of fear and dread that is holding everyone else back.</p>
+
+                    <p>Those of us who were in startups that lived through 2001-2003 know exactly what this can be like.</p>
+
+                    <p><strong>Third, something completely unanticipated, and bad, might happen.</strong></p>
+
+                    <p>Another major terrorist attack is the one that I frankly worry about the most.  A superbug.  All-out war in the Middle East.  North Korea demonstrating the ability to launch a true nuclear-tipped ICBM.  Giant flaming meteorites.  Such worst-case scenarios will not only close the funding window, they might keep it closed for a long time.</p>
+
+                    <p>Funny story: it turns out that a lot of Internet business models from the late 90's that looked silly at the time actually work really well -- either in their original form or with some tweaking.</p>
+
+                    <p>And there are quite a few startups from the late 90's that are doing just great today -- examples being OpenTable (which is about to go public) and TellMe (which recently sold itself to Microsoft for $800 million), and my own company Opsware -- which would be bankrupt today if we hadn't raised a ton of money when we could, and instead just did its first $100 million revenue year and has a roughly $1 billion public market value.</p>
+
+                    <p>I'll go so far as to say that the <em>big</em> difference between the startups from that era that are doing well today versus the ones that no longer exist, is that the former group raised a ton of money when they could, and the latter did not.</p>
+
+                    <p><br>
+                    <strong>So how much money should I raise?</strong></p>
+
+                    <p>In general, as much as you can.</p>
+
+                    <p>Without giving away control of your company, and without being insane.</p>
+
+                    <p>Entrepreneurs who try to play it too aggressive and hold back on raising money when they can because they think they can raise it later occasionally do very well, but are gambling their whole company on that strategy <em>in addition to all the normal startup risks</em>.</p>
+
+                    <p>Suppose you raise a lot of money and you do really well.  You'll be really happy and make a lot of money, even if you don't make quite as much money as if you had rolled the dice and raised less money up front.</p>
+
+                    <p>Suppose you don't raise a lot of money when you can and it backfires.  You lose your company, and you'll be really, really sad.</p>
+
+                    <p><em>Is it really worth that risk?</em></p>
+
+                    <p>There is one additional consequence to raising a lot of money that you should bear in mind, although it is more important for some companies than others.</p>
+
+                    <p>That is <strong>liquidation preference</strong>.  In the scenario where your company ultimately gets acquired: the more money you raise from outside investors, the higher the acquisition price has to be for the founders and employees to make money on top of the initial payout to the investors.</p>
+
+                    <p class="callout">In other words, raising a lot of money can make it much harder to effectively sell your company for less than a very high price, which you may not be able to get when the time comes.</p>
+
+                    <p>If you are convinced that your company is going to get bought, and you don't think the purchase price will be that high, then raising less money is a good idea purely in terms of optimizing for your own financial outcome.  However, that strategy has lots of other risks and will be addressed in another entertaining post, to be entitled "Why building to flip is a bad idea".</p>
+
+                    <p>Taking these factors into account, though, <strong>in a normal scenario, raising more money rather than less usually makes sense</strong>, since <strong>you are buying yourself insurance against both internal and external potential bad events</strong> -- and that is more important than worrying too much about dilution or liquidation preference.</p>
+
+                    <p><br>
+                    <strong>How much money is too much?</strong></p>
+
+                    <p><em>There are downside consequences to raising too much money.</em></p>
+
+                    <p>I already discussed two of them -- possibly incremental dilution (which I dismissed as a real concern in most situations), and possibly excessively high liquidation preference (which should be monitored but not obsessed over).</p>
+
+                    <p>The big downside consequence to too much money, though, is <em>cultural corrosion</em>.</p>
+
+                    <p>You don't have to be in this industry very long before you run into the startup that has raised a ton of money and has become infected with a culture of complacency, laziness, and arrogance.</p>
+
+                    <p>Raising a ton of money <em>feels</em> really good -- you feel like you've done something, that you've accomplished something, that you're successful when a lot of other people weren't.</p>
+
+                    <p>And of course, none of those things are true.</p>
+
+                    <p><strong>Raising money is never an accomplishment in and of itself</strong> -- it just raises the stakes for all the hard work you would have had to do anyway: actually building your business.</p>
+
+                    <p>Some signs of cultural corrosion caused by raising too much money:</p>
+
+                    <ul>
+                        <li>Hiring too many people -- slows everything down and makes it much harder for you to react and change.  You are almost certainly setting yourself up for layoffs in the future, <em>even if you are successful</em>, because you probably won't accurately allocate the hiring among functions for what you will really need as your business grows.</li>
+
+                        <li>Lazy management culture -- it is easy for a management culture to get set where the manager's job is simply to hire people, and then every other aspect of management suffers, with potentially disastrous long-term consequences to morale and effectiveness.</li>
+
+                        <li>Engineering team bloat -- another side effect of hiring too many people; it's very easy for engineering teams to get too large, and it happens very fast.  And then the "Mythical Man Month" effect kicks in and everything slows to a crawl, your best people get frustrated and quit, and you're in huge trouble.</li>
+
+                        <li>Lack of focus on product and customers -- it's a lot easier to not be completely obsessed with your product and your customers when you have a lot of money in the bank and don't have to worry about your doors closing imminently.</li>
+
+                        <li>Too many salespeople too soon -- out selling a product that isn't quite ready yet, hasn't yet achieved Product/Market Fit -- alienating early adopters and making it much harder to go back when the product does get right.</li>
+
+                        <li>Product schedule slippage -- what's the urgency?  We have all this cash!  Creating a golden opportunity for a smaller, scrappier startup to come along and kick your rear.</li>
+                    </ul>
+
+                    <p><strong>So what should you do if you do raise a lot of money?</strong></p>
+
+                    <p>As my old boss Jim Barksdale used to say, <em>the main thing is to keep the main thing the main thing</em> -- be just as focused on product and customers when you raise a lot of money as you would be if you hadn't raised a lot of money.</p>
+
+                    <p>Easy to say, hard to do, but worth it.</p>
+
+                    <p>Continue to run as lean as you can, bank as much of the money as possible, and <em>save it for a rainy day</em> -- or a nuclear winter.</p>
+
+                    <p>Tell everyone inside the company, over and over and over, until they can't stand it anymore, and then tell them some more, that <em>raising money does not count as an accomplishment</em> and that you haven't actually done anything yet other than raise the stakes and increase the pressure.</p>
+
+                    <p>Illustrate that point by staying as scrappy as possible on material items -- office space, furniture, etc.  The two areas to splurge, in my opinion, are big-screen monitors and ergonomic office chairs.  Other than that, it should be Ikea all the way.</p>
+
+                    <p>The easiest way to lose control of your spending when you raise too much money is to <em>hire too many people</em>.  The second easiest way is to <em>pay people too much</em>.  Worry more about the first one than the second one; more people multiply spending a lot faster than a few raises.</p>
+
+                    <p>Generally speaking, <em>act like you haven't raised nearly as much money as you actually have</em> -- in how you talk, act, and spend.</p>
+
+                    <p>In particular, <em>pay close attention to deadlines</em>.  The easiest thing to go wrong when you raise a lot of money is that suddenly things don't seem so urgent anymore.  Oh, they are.  Competitors still lurk behind every bush and every tree, metaphorically speaking.  Keeping moving fast if you want to survive.</p>
+
+                    <p><em>There are certain startups that raised an excessive amount of money, proceeded to spend it like drunken sailors, and went on to become hugely successful.</em>  Odds are, you're not them.  Don't bet your company on it.  </p>
+
+                    <p>There are a lot more startups that raised an excessive amount of money, burned through it, and went under.</p>
+
+                    <p>Remember Geocast?  General Magic?  Microunity?  <a href="http://web.archive.org/web/20100526042228/http://en.wikipedia.org/wiki/Hal_Computer_Systems">HAL</a>?  <a href="http://web.archive.org/web/20100526042228/http://en.wikipedia.org/wiki/Trilogy_Systems">Trilogy Systems</a>?</p>
+
+                    <p>Exactly.</p>
+                </div>
+            </div>
+            <section class="chapter">
+                <div class="container">
+                    <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
+                    <h1 class="chapter__header">Chapter 7: <span class="indent">Why a startup's initial business plan doesn't matter that much</span></h1>
+                    <p class="article__chapters">Jul 31, 2007</p>
+                </div>
+            </section>
+            <div class="article__body">
+                <div class="article__body-wrapper">
+                    <p class="callout">A startup's initial business plan doesn't matter that much, because <em>it is very hard to determine up front exactly what combination of product and market will result in success</em>.</p>
+
+                    <p>By definition you will be doing something new, in a world that is a very uncertain place.  You are simply <em>probably not going to know whether your initial idea will work as a product and a business</em>, or not.  And you will probably have to rapidly evolve your plan -- possibly every aspect of it -- as you go.</p>
+
+                    <p>(The military has a saying that expresses the same concept -- "No battle plan ever survives contact with the enemy."  In this case, your enemy is the world at large.)</p>
+
+                    <p>It is therefore much more important for a startup to <em>aggressively seek out a big market</em>, and <em>product/market fit within that market</em>, once the startup is up and running, than it is to try to plan out what you are going to do in great detail ahead of time.</p>
+
+                    <p><em>The history of successful startups is quite clear on this topic.</em>  </p>
+
+                    <p>Normally I would simply point to Microsoft, which started as a programming tools company before IBM all but forced Bill Gates to go into the operating system business, or Oracle, which was a consultancy for the CIA before Larry Ellison decided to productize the relational database, or Intel, which was a much smaller company focused on the memory chip market until the Japanese onslaught of the mid-80's forced Andy Grove to switch focus to CPUs.</p>
+
+                    <p>However, I've recently been reading Randall Stross's marvelous book about Thomas Edison, <strong><a href="http://web.archive.org/web/20100526041746/http://www.amazon.com/gp/product/1400047625?ie=UTF8&tag=marandsblo-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1400047625">The Wizard of Menlo Park</a></strong>.</p>
+
+                    <p>Edison's first commercially viable breakthrough invention was the phonograph -- the forerunner to what you kids know as the record player, the turntable, the Walkman, the CD player, and the IPod.  Edison went on, of course, to become one of the greatest inventors and innovators of all time.</p>
+
+                    <p>As our story begins, Edison, an unknown inventor running his own startup, is focused on developing better hardware for telegraph operators.  He is particularly focused on equipment for telegraph operators to be able to send voice messages over telegraph lines.</p>
+
+                    <p>Cue the book:</p>
+
+                    <blockquote>
+                        <p>The day after Edison had noted the idea for recording voice messages received by a telegraphy office, he came up with a variation.  That evening, on 18 July 1877, when [his lab's] midnight dinner had been consumed... [Edison] turned around to face [his assistant Charles Batchelor] and casually remarked, "Batch, if we had a point on this, we could make a record of some material which we could afterwards pull under the point, and it would give us the speech back."</p>
+
+                        <p>As soon as Edison had pointed it out, it seemed so obvious that they did not pause to appreciate... the suggestion.  Everyone jumped up to rig a test... within an hour, they had the gizmo set up on the table... Edison sat down, leaned into the mouthpiece... [and] delivered the stock phrase the lab used to test telephone diaphragms: "Mary had a little lamb."</p>
+
+                        <p>...Batchelor reinserted the beginning of the [strip on which the phrase had been recorded]... out came "ary ad ell am."  "It was not fine talking," Batchelor recalled, "but the shape of it was there."  The men celebrated with a whoop, shook hands with one another, and worked on.  By breakfast the following morning, they had succeeded in getting clear articulation from waxed paper, <em>the first recording medium</em> -- in the first midnight recording session.</p>
+
+                        <p>...The discovery was treated suprisingly casually in the lab's notebooks...</p>
+
+                        <p>It was a singular moment in the modern history of invention, but, in the years that would follow, Edison would never tell the story the way it actually unfolded that summer, always moving the events from July 1877 to December.  We may guess the reason why: <em>in July, he and his assistants failed to appreciate what they had discovered</em>.  At the time, they were working feverishly to develop a set of working telephones to show their best prospect... Western Union... There was no time to pause and reflect on the incidental invention of what was the first working model of the phonograph...</p>
+
+                        <p>The invention continued to be labeled in the notebooks with the broader rubric "speaking telegraph", reflecting the assumption that it would be put to use in the telegraph office, recording messages.  An unidentified staff member draw up a list of possible names for the machine, which included: tel-autograph, tel-autophone, "chronophone = time-announcer = speaking clock", "didaskophone = teaching speaker = portable teacher", "glottophone = language sounder or speaker", "climatophone = weather announcer", "klangophone = bird cry sounder", "hulagmophone = barking sounder"...</p>
+
+                        <p>...In October 1877, [Edison] wrote his father that he was "at present very hard up for cash," but if his "speaking telegraph" was successful, he would receive an advance on royalties.  The commercial potential of his still-unnamed recording apparatus remained out of sight...</p>
+
+                        <p>[A description of the phonograph in Scientific American in early November] set off a frenzy in America and Europe.  The New York Sun was fascinated by the metaphysical implications of an invention that could play "echoes from dead voices".  The New York Times predicted [in an eerie foreshadowing of their bizarre coverage of the Internet in the mid-1990's] that a large business would develop in "bottled sermons", and wealthy connoisseurs would take pride in keeping "a well-stocked oratorical cellar."</p>
+
+                        <p>...Such was the authority of Scientific American's imprimatur that all of this extraordinary attention was lavished not on the first working phonograph made for public inspection, but merely a description supplied by Edison's assistant.</p>
+
+                        <p>...<em>By late November, Edison and his staff had caught onto the phonograph's commercial potential as a gadget for entertainment</em>... a list of possible uses for the phonograph was noted [by Edison and his staff], assembled apparently by free association: speaking toys (dogs, reptiles, humans), whistling toy train engines, music boxes, clocks and watches that announced the time.  There was even an inkling of the future importance of personal music collections, here described as the machine for the whole family to enjoy, equipped with a thousand [music recordings], "giving endless amusement."</p>
+
+                        <p>...The first actual model, however, remained to be built... On 4 December 1877, Batchelor's diary laconically noted, "[staff member John Kruesi] made phonograph today"; it received no more notice than the other entry, "working on speaking tel", the invention [for telegraph operators] that continued to be at the top of the laboratory's research agenda...</p>
+
+                        <p>...On 7 December 1877, [Edison] walked into the New York office of Scientific American, placed a small machine on the editor's desk, and with about a dozen people gathered around, turned the crank.  "How do you do?" asked the machine, introducing itself crisply.  "How do you like the phonograph?"  It itself was feeling quite well, it assured its listeners, and then cordially bid everyone a good night...</p>
+
+                        <p>...Having long worked within the world of telegraphic equipment, [Edison] had been perfectly placed to receive the technical inspiration for the phonograph.  But that same world, oriented to a handful of giant industrial customers, had nothing in common with the consumer marketplace...</p>
+                    </blockquote>
+
+                    <p>The story goes on and on -- and you should read <strong><a href="http://web.archive.org/web/20100526041746/http://www.amazon.com/gp/product/1400047625?ie=UTF8&tag=marandsblo-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1400047625">the book</a></strong>; it's all like this.</p>
+
+                    <p>The point is this:</p>
+
+                    <p>If Thomas Edison didn't know what he had when he invented the phonograph while he thought he was trying to create better industrial equipment for telegraph operators...</p>
+
+                    <p>...what are the odds that you -- or any entrepreneur -- is going to have it all figured out up front?<br>
+                    </p>
+                </div>
+            </div>
+            <section class="chapter">
+                <div class="container">
+                    <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
+                    <h1 class="chapter__header">Chapter 8: <span class="indent">Hiring, managing, promoting, and firing executives</span></h1>
+                    <p class="article__chapters">Aug 28, 2007</p>
+                </div>
+            </section>
+            <div class="article__body">
+                <div class="article__body-wrapper">
+                    <p>One of the most critical things a startup founder must do is <em>develop a top-notch executive team</em>.  This is a topic that could fill a whole book, but in this post I will provide specific guidelines on how to hire, manage, promote, and fire executives in a startup based on my personal observations and experiences.</p>
+
+                    <p>For the purposes of this post, definitions:  An executive is a <em>leader</em> -- someone who runs a function within the company and has primary responsibility for an organization within the company that will contribute to the company's success or failure.  The difference between an executive and a manager is that the executive has a <em>higher degree of latitude</em> to organize, make decisions, and execute within her function than a manager.  <em>The manager may ask what the right thing to do is; the executive should know.</em></p>
+
+                    <p>The general theory of executives, like managers, is, per Andy Grove: <em>the output of an executive is the output of her organization</em>.  Therefore, the primary task of an executive is to maximize the output of her organization.  However, in a startup, a successful executive must accomplish three other critical tasks simultaneously:</p>
+
+                    <ul>
+                        <li><strong>Build her organization</strong> -- typically when an executive arrives or is promoted into her role at a startup, she isn't there to be a caretaker; rather she must build her organization, often from scratch.  This is a sharp difference from many big company executives, who can spend their entire careers running organizations other people built -- often years or decades earlier.</li>
+                        <li><strong>Be a primary individual contributor</strong> -- a startup executive must "roll up her sleeves" and produce output herself.  There are no shortage of critical things to be done at a startup, and an executive who cannot personally produce while simultaneously building and running her organization typically will not last long.  Again, this is a sharp difference from many big companies, where executives often serve more as administrators and bureaucrats.</li>
+                        <li><strong>Be a team player</strong> -- a startup executive must take personal responsibility for her relationships with her peers and people throughout the startup, in all functions and at all levels.  Big companies can often tolerate internal rivalries and warfare; startups cannot.</li>
+                    </ul>
+
+                    <p>Being a startup executive is not an easy job.  The rewards are substantial -- the ability to contribute directly to the startups's success; the latitude to build and run an organization according to her own theories and principles; and a meaningful equity stake that can lead to personal financial independence if the startup succeeds -- but the responsibilities are demanding and intense.</p>
+
+                    <p><strong>Hiring:</strong></p>
+
+                    <p>First, <em>if you're not sure whether you need an executive for a function, don't hire one.</em></p>
+
+                    <p>Startups, particularly well-funded startups, often hire executives too early.  Particularly before a startup has achieved product/market fit, <em>it is often better to have a highly motivated manager or director running a function than an executive</em>.</p>
+
+                    <p>Hiring an executive too quickly can lead to someone who is really expensive, sitting there in the middle of the room, doing very little.  Not good for the executive, not good for the rest of the team, not good for the burn rate, and not good for the company.</p>
+
+                    <p><em>Hire an executive only when it's clear that you need one</em>: when an organization needs to get built; when hiring needs to accelerate; when you need more processes and structure and rigor to how you do things.</p>
+
+                    <p class="callout">Second, <em>hire the best person for the next nine months, not the next three years</em>.</p>
+
+                    <p>I've seen a lot of startups overshoot on their executive hires.  They need someone to build the software development team from four people to 30 people over the next nine months, so they hire an executive from a big company who has been running 400 people.  That is usually death.</p>
+
+                    <p><em>Hire for what you need now</em> -- and for roughly the next nine months.  At the very least, you will <em>get</em> what you need now, and the person you hire may well be able to scale and keep going for years to come.</p>
+
+                    <p>In contrast, if you overhire -- if you hear yourself saying, "this person will be great when we get bigger" -- you are most likely hiring someone who, best case, isn't that interested in doing things at the scale you need, and worst case, doesn't know how.</p>
+
+                    <p>Third, <em>whenever possible, promote from within</em>.</p>
+
+                    <p class="callout">Great companies develop their own executives.  There are several reasons for this:</p>
+
+                    <ul>
+                        <li>You get to develop your best people and turn them into executives, which is great for both them and you -- this is the single best, and usually the only, way to hold onto great people for long periods of time.</li>
+                        <li>You ensure that your executives completely know and understand your company culture, strategy, and ethics.</li>
+                        <li>Your existing people are the "devil you know" -- anyone new coming from outside is going to have flaws, often really serious ones, but you probably won't figure out what they are until after you've hired them.  With your existing people, you know, and you minimize your odds of being shocked and appalled.</li>
+                    </ul>
+
+                    <p>Of course, this isn't always possible.  Which segues us directly into...</p>
+
+                    <p>Fourth, my list of the <em>key things to look at, and for</em>, when evaluating executive candidates:</p>
+
+                    <ul>
+                        <li><em>Look for someone who is hungry and driven</em> -- someone who wants a shot at doing "their thing".  Someone who has been an up and comer at a midsized company but wants a shot at being a primary executive at a startup can be a great catch.</li>
+                        <li><em>Flip side of that: beware people who have "done it before".</em>  Sometimes you do run into someone who has been VP Engineering at four companies and loves it and wants to do it at a fifth company.  More often, you will be dealing with someone who is no longer hungry and driven.  This is a very, very big problem to end up with -- be very careful.</li>
+                        <li><em>Don't disqualify someone based on ego or cockiness</em> -- as long as she's not insane.  Great executives are high-ego -- you want someone driven to run things, driven to make decisions, confident in herself and her abilities.  I don't mean loud and obnoxious, I mean assured and determined, bleeding over into cocky.  <em>If a VC's ideal investment is a company that will succceed without him, then your ideal executive hire is someone who will succeed without you.</em></li>
+                        <li><em>Beware hiring a big company executive for a startup.</em>  The executive skill sets required for a big company vs a startup are <em>very</em> different.  Even <em>great</em> big company executives frequently have <em>no</em> idea what to do once they arrive at a startup.</li>
+                        <li>In particular, <em>really beware hiring an executive from an incredibly successful big company</em>.  This is often very tempting -- who wouldn't want to bring onboard someone who sprinkles some of that IBM (in the 80's), Microsoft (in the 90's), or Google (today) fairy dust on your startup?  The issue is that people who have been at an incredibly successful big company often cannot function in a normal, real world, competitive situation where they don't start every day with 80% market share.  Back in the 80's, you often heard, "never hire anyone straight out of IBM -- first, let them go somewhere else and fail, and then hire them".  Believe it.</li>
+                        <li>This probably goes without saying, but <em>look for a pattern of output</em> -- accomplishment.  Validate it by reference checking peers, reports, and bosses.  Along the way, reference check personality and teamwork, but look first and foremost for a pattern of output.</li>
+                    </ul>
+
+                    <p>Fifth, <em>by all means, use an executive recruiter, but for sourcing, not evaluation</em>.</p>
+
+                    <p>There are some executive recruiters who are actually really good at evaluation.  Others are not.  It's beside the point.  <em>It's your job to evaluate and make the decision, not the recruiter's.</em></p>
+
+                    <p>I say this because I have never met a recruiter who lacks confidence in his ability to evaluate candidates and pass judgment on who's right for a given situation.  This can lull a startup founder into relying on the recruiter's judgment instead of really digging in and making your own decision.  Betting that your recruiter is great at evaluation is not a risk you want to take.  You're the one who has to fire the executive if it doesn't work out.</p>
+
+                    <p>Sixth, <em>be ready to pay market compensation</em>, including more cash compensation than you want, but <em>watch for red flags in the compensation discussion</em>.</p>
+
+                    <p class="callout">You want someone focused on upside -- on building a company.  That means, a focus on their stock option package first and foremost.</p>
+
+                    <p>Watch out for candidates who want egregious amounts of cash, high bonuses, restricted stock, vacation days, perks, or -- worst of all -- guaranteed severance.  A candiate who is focused on those things, as opposed to the option package, is not ready to do a startup.</p>
+
+                    <p>On a related note, be careful about option accceleration in the event of change of control.  This is often reasonable for support functions such as finance, legal, and HR where an acquirer would most likely not have a job for the startup executive in any of those functions.  But this is not reasonable, in my view, for core functions such as engineering, product management, marketing, or sales.  You don't want your key executives focused on selling the company -- unless of course you want them focused on selling the company.  Make your acceleration decisions accordingly.</p>
+
+                    <p>Seventh, <em>when hiring the executive to run your former specialty, be careful you don't hire someone weak on purpose</em>.</p>
+
+                    <p>This sounds silly, but you wouldn't believe how often it happens.  The CEO who used to be a product manager who has a weak product management executive.  The CEO who used to be in sales who has a weak sales executive.  The CEO who used to be in marketing who has a weak marketing executive.</p>
+
+                    <p>I call this the "Michael Eisner Memorial Weak Executive Problem" -- after the CEO of Disney who had previously been a brilliant TV network executive.  When he bought ABC at Disney, it promptly fell to fourth place.  His response?  "If I had an extra two days a week, I could turn around ABC myself."  Well, guess what, he didn't have an extra two days a week.</p>
+
+                    <p>A CEO -- or a startup founder -- often has a hard time letting go of the function that brought him to the party.  The result: you hire someone weak into the executive role for that function so that you can continue to be "the man" -- consciously or subconsciously.  Don't let it happen to you -- make sure the person you hire into that role is way better than you used to be.</p>
+
+                    <p>Eighth, <em>recognize that hiring an executive is a high-risk proposition</em>.</p>
+
+                    <p>You often see a startup with a screwed up development process, but "when we get our VP of Engineering onboard, everything will get fixed".  Or a startup that is missing its revenue targets, but "when we get our VP of sales, reveue will take off".</p>
+
+                    <p>Here's the problem: in my experience, <em>if you know what you're doing, the odds of a given executive hire working out will be about 50/50</em>.  That is, about 50% of the time you'll screw up and ultimately have to replace the person.  (If you don't know what you're doing, your failure rate will be closer to 100%.)</p>
+
+                    <p>Why?  People are people.  People are complicated.  People have flaws.  You often don't know what those flaws are until after you get to know them.  Those flaws are often fatal in an executive role.  And more generally, sometimes the fit just isn't there.</p>
+
+                    <p class="callout">This is why I'm so gung ho on promoting from within.  At least then you know what the flaws are up front.</p>
+
+                    <p><strong>Managing:</strong></p>
+
+                    <p>First, <em>manage your executives</em>.</p>
+
+                    <p>It's not that uncommon to see startup founders, especially first-timers, who hire executives and are then reluctant to manage them.</p>
+
+                    <p>You can see the thought process: <em>I just hired this really great, really experienced VP of Engineering who has way more experience running development teams than I ever did -- I should just let him go do his thing!</em></p>
+
+                    <p>That's a bad idea.  While respecting someone's experience and skills, you should nevertheless manage every executive as if she were a normal employee.  This means weekly 1:1's, performance reviews, written objectives, career development plans, the whole nine yards.  Skimp on this and it is very easy for both your relationship with her and her effectiveness in the company to skew sideways.</p>
+
+                    <p>This even holds if you're 22 and she's 40, or 50, or 60!  Don't be shy, that will just scare her -- and justifiably so.</p>
+
+                    <p>Second, <em>give your executives the latitude to run their organizations</em>.</p>
+
+                    <p>This is the balancing act with the previous point, but it's equally important.  Don't micromanage.</p>
+
+                    <p>The whole point of having an executive is to have someone who can figure out how to build and run an organization so that you don't have to.  Manage her, understand what she is doing, be very clear on the results you expect, but let her do the job.</p>
+
+                    <p>Here's the key corollary to that: <em>if you want to give an executive full latitude, but you're reluctant to do so because you're not sure she can make it happen, then it's probably time to fire her.</em></p>
+
+                    <p>In my experience it's not that uncommon for a founder or CEO to be uncomfortable -- sometimes only at a gut level -- at really giving an executive the latitude to run with the ball.  That is a surefire signal that the executive is not working out and probably needs to be fired.  More on that below.</p>
+
+                    <p>Third, <em>ruthlessly violate the chain of command in order to gather data</em>.</p>
+
+                    <p>I don't mean going around telling people under an executive what to do without her knowing about it.  I mean, ask questions, continually, at all levels of the organization.  How are things going?  What do you think of the new hires?  How often are you meeting with your manager?  And so on.</p>
+
+                    <p>You never want the bulk of your information about a function coming from the executive running that function.  That's the best way to be completely and utterly surprised when everything blows up.</p>
+
+                    <p>Here's the kicker: <em>a great executive never minds when the CEO talks to people in her organization</em>.  In fact, she loves it, because it means the CEO just hears more great things about her.</p>
+
+                    <p class="callout">If you have an executive who doesn't want you to talk to people in her organization, you have a bad executive.</p>
+
+                    <p><strong>Promoting:</strong></p>
+
+                    <p>This will be controversial, but I am a big fan of <em>promoting talented people as fast as you can</em> -- promoting up and comers into executive roles, and promoting executives into bigger and broader responsibilities.</p>
+
+                    <p>You can clearly overdo this -- you can promote someone before they are ready and in the worst case, completely screw up their career.  (Seen it.  Done it.)  You can also promote someone to their level of incompetence -- the Peter Principle.  (Seen it.  Done it.)</p>
+
+                    <p>However, <em>life is short, startups move fast, and you have stuff to get done</em>.  You aren't going to have the privilege of working with that many great, talented, high-potential people in your career.  When you find one, promote her as fast as you can.  Great for her, great for the company, and great for you.</p>
+
+                    <p><em>This assumes you are properly training and managing her along the way.</em>  That is left as an exercise for the reader.</p>
+
+                    <p><em>The surest sign someone is ready for promotion is when they're doing a great job running their current team.</em>  Projects are getting done, team morale is good, new hires are top quality, people are happy.  Time to promote some people into new challenges.</p>
+
+                    <p>I'm a firm believer that <em>most people who do great things are doing them for the first time</em>.  Returning to my theory of hiring, I'd rather have someone all fired up to do something for the first time than someone who's done it before and isn't that excited to do it again.  You rarely go wrong giving someone who is high potential the shot.</p>
+
+                    <p><em>This assumes you can tell the high potential people apart from everyone else.</em>  That too is left as an exercise for the reader.</p>
+
+                    <p><strong>Firing:</strong></p>
+
+                    <p>First, <em>recognize the paradox of deciding to fire an executive</em>.</p>
+
+                    <p>The paradox works like this:</p>
+
+                    <p>It takes time to gather data to evaluate an executive's performance.  You can't evaluate an executive based on her own output, like a normal employee -- you have to evaluate her based on the output of her organization.  It takes time for her to build and manage her organization to generate output.  <em>Therefore, it takes longer to evaluate the performance of an executive than a normal employee.</em></p>
+
+                    <p>But, an executive can cause far more damage than a normal employee.  A normal employee doesn't work out, fine, replace him.  An executive doesn't work out, it can -- worst case -- permanently cripple her function and sometimes the entire company.  <em>Therefore, it is far more important to fire a bad executive as fast as possible, versus a normal employee.</em></p>
+
+                    <p>Solution?  There isn't one.  It's a permanent problem.</p>
+
+                    <p>I once asked Andy Grove, one of the world's all-time best CEOs, about this.  He said, you always fire a bad executive too late.  If you're really good, you'll fire her about three months too late.  But you'll always do it too late.  If you did it fast enough that it wasn't too late, you wouldn't have enough data, and you'd risk being viewed as arbitrary and capricious by the rest of the organization.</p>
+
+                    <p>Second, <em>the minute you have a bad feeling in your gut, start gathering data</em>.</p>
+
+                    <p>Back to the point on ruthlessly violating the chain of command -- get to it.  Talk to everyone.  Know what's going on.  Unless you're paranoid -- and, shockingly, I <em>have</em> met paranoid founders and CEOs, and not counting Andy Grove -- you need to gather the data because you're going to need to fire the executive -- if you're good, in about three months.</p>
+
+                    <p>In the meantime, of course do everything you can to coach and develop and improve the executive.  If it works out, that's great.  If not, get ready.</p>
+
+                    <p>A few specific things I think are critical to look for:</p>
+
+                    <ul>
+                        <li><em>Is the executive hiring?</em>  If there are open headcount slots and nobody's coming in the door, you have a problem.  Just as bad is when the new hires aren't very good -- when they're bringing down the average quality of the organization.</li>
+                        <li><em>Is the executive training and developing her people?</em>  Often in a startup, an executive is hired to take over a function that's already been started, at least in rudimentary form.  The people in that function should be noticeably better at their jobs, and highly respectful of the executive's skills, within the first several months at the very least.  If not, you have a problem.</li>
+                        <li><em>What do the other executives think?</em>  Great executives are often imperfect but their peers always respect them.  If your other executives are skeptical of a new executive after the first few months, you have a problem.</li>
+                        <li><em>Is it painful for you to interact with the executive?</em>  Do you try to avoid or cancel your 1:1's?  Does talking to her give you a headache?  Do you often not understand what point she's trying to make or why she's focused on such an odd issue?  If the answer to any of these questions is yes, you have a problem.</li>
+                    </ul>
+
+                    <p>Third, <em>fire crisply</em>.</p>
+
+                    <p>Firing an executive sucks.  It's disruptive to the organization.  It creates a lot of work for you -- not least of which is you'll have to go find someone else for the job.  And, it risks making you look bad, since you're the one who hired the person in the first place.</p>
+
+                    <p>And it always seems to happen at a critical time in your startup's life, when the last thing you need is a distraction like this.</p>
+
+                    <p>Nevertheless, the only thing to do is do it, do it professionally, make clear to the organization what will happen next, and get on down the road.</p>
+
+                    <p>In my opinion the two most common mistakes people make when they fire executives both fall in the category of pulling one's punches, and I highly recommend avoiding them:</p>
+
+                    <ul>
+                    <li>Long transition periods -- tempting, but counterproductive.  Confusing, demoralizing, and just plain weird.  Instead, make a clean break, put a new person in charge -- even if only on an acting basis -- and get moving.</li>
+                    <li>Demotion as an alternative to firing (or, alternately, "I know, we'll hire her a boss!").  Hate it.  Great people don't deal well with getting demoted.  There is an occasional exception.  Unless you are positive you have such an exception, skip it, and move directly to the conclusion.</li>
+                    </ul>
+
+                    <p>Fourth, <em>don't feel guilty</em>.</p>
+
+                    <p>You're not beheading anyone.</p>
+
+                    <p>Anyone who got a job as an executive at a startup is going to have an easy time getting the next job.  After all, she can always paint you as a crazy founder, or inept CEO.</p>
+
+                    <p>More often than not, when you fire an executive, you are doing her a favor -- you are giving her a chance to find a better fit in a different company where she will be more valued, more respected, and more successful.  This sounds mushy, but I mean it.  And if she can't, then she has a much deeper problem and you just dodged a huge bullet.</p>
+
+                    <p>And on that cheery note, <em>good luck</em>!<br>
+                    </p>
+                </div>
+            </div>
+            <section class="chapter">
+                <div class="container">
+                    <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
+                    <h1 class="chapter__header">Chapter 9: <span class="indent">How to hire a professional CEO</span></h1>
+                    <p class="article__chapters">Aug 30, 2007</p>
+                </div>
+            </section>
+            <div class="article__body">
+                <div class="article__body-wrapper">
+                    <p class="callout">Don't.</p>
+                    <p>If you don't have anyone on your founding team who is capable of being CEO, then sell your company -- now.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+{% endblock %}

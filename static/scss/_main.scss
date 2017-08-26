@@ -11,6 +11,7 @@ html {
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    font-weight: 100;
 }
 
 body {
@@ -32,6 +33,7 @@ a:hover {
     text-decoration: none;
 }
 
+
 //=====================
 //   CONTAINER STYLES
 //=====================
@@ -47,6 +49,7 @@ a:hover {
 .is-home .hero {
     background-image: url('../img/pm-home-bg.jpg');
     color: $white;
+    height: 80vh;
     padding: 50px 7.5% 35px;
     position: relative;
 
@@ -55,15 +58,26 @@ a:hover {
     }
 }
 
+.pink .hero {
+    background-image: url('../img/pm-pink-bg.jpg');
+    color: $pink;
+}
+
+.pink .chapter__heading {
+    background-color: $pink;
+}
+
 .hero {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    position: relative;
     width: 100%;
 }
 
 .hero__header {
+    @include serif-rom;
+
     font-size: 11vw;
 
     @media screen and (min-width: $tablet) {
@@ -72,6 +86,8 @@ a:hover {
 }
 
 .is-home .hero__header {
+    @include sans-regular;
+
     font-size: 13vw;
 
     @media screen and (min-width: 600px) {
@@ -86,7 +102,6 @@ a:hover {
 .is-home .hero__text {
     bottom: 35px;
     font-size: 21px; //spec
-    font-weight: 100;
     left: 0;
     padding: 0 7.5%;
     position: absolute;
@@ -106,7 +121,6 @@ a:hover {
     background-color: inherit;
     color: $black;
     display: block;
-    font-weight: 100;
     padding: 45px 7.5%;
     position: relative;
     text-decoration: none;
@@ -201,7 +215,7 @@ a:hover {
     text-align: right;
 
     @media screen and (min-width: $tablet) {
-        font-size: 24px;
+        font-size: 21px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -235,7 +249,6 @@ a:hover {
 
 .message__text-wrapper {
     font-size: 20px; //arb
-    font-weight: 100;
     line-height: 1.2; //arb
     margin: 0 auto;
     max-width: 861px; //spec
@@ -253,4 +266,135 @@ a:hover {
         text-indent: 37px; //spec
     }
 
+}
+
+//===================
+//  ARTICLE STYLES
+//===================
+
+.article__hero {
+    padding: 45px 7.5%;
+
+    @media screen and (min-width: $tablet) {
+        padding: 67px 5.76%;
+    }
+}
+
+.chapter {
+    background-color: inherit;
+    padding: 45px 7.5%;
+    position: relative;
+
+    @media screen and (min-width: $tablet) {
+        padding: 80px 6.1%;
+    }
+}
+
+.pink .chapter {
+    background-color: $pink;
+}
+
+.chapter__header {
+    @include sans-regular;
+
+    font-size: 7.1vw; //arb
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 5.1vw;
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $max-width) {
+        font-size: 72px; //spec
+    }
+}
+
+.article__body {
+    padding: 100px 6.1%;
+}
+
+.article__body-wrapper {
+    margin: 0 auto;
+    max-width: 870px; //spec
+}
+
+.article__body p {
+    font-size: 18px; //arb
+    line-height: 1.4; //arb
+    margin: 0 auto 40px; //spec
+    max-width: 900px;
+
+    @media screen and (min-width: $mobile) {
+        font-size: 24px; //spec
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin: 0 auto 80px; //spec
+        padding: 0 100px;
+    }
+}
+
+.article a {
+    color: $black;
+}
+
+.article blockquote p {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 25px;
+    }
+}
+
+.article blockquote {
+    margin-bottom: 40px; //arb
+}
+
+.callout,
+p.callout {
+    @include serif-rom;
+
+    color: $grey;
+    font-size: 28px; //arb
+    line-height: 1.4; // arb
+    margin-bottom: 40px;
+    padding: 0;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 48px; //override specific styles
+        line-height: 1.2;
+        margin-bottom: 80px; //spec
+    }
+}
+
+.article ul {
+    font-size: 18px;
+    list-style-type: disc;
+    margin-bottom: 40px;
+    padding: 0 7.5%;
+
+    @media screen and (min-width: $mobile) {
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 80px;
+        padding: 0 100px;
+    }
+}
+
+.article li {
+    margin-bottom: 15px; //arb
+}
+
+.pink .article a:hover {
+    color: $pink;
+    opacity: 1;
+}
+
+.pink blockquote {
+    color: darken($pink, 7%); //arb to make the color visible against the white bg
 }

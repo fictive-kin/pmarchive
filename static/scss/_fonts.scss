@@ -69,7 +69,7 @@
 }
 
 @mixin sans-light {
-    font-family: 'Px Light';
+    font-family: helvetica;
     font-weight: 100;
 }
 
@@ -79,6 +79,6 @@
 }
 
 @mixin sans-regular {
-    font-family: 'Px Regular';
-    font-weight: 300;
+    font-family: helvetica;
+    font-weight: 500;
 }
