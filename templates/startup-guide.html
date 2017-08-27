@@ -1,6 +1,7 @@
 {% extends 'article.html' %}
 {% block bodyClass %}pink {{ super() }}{% endblock %}
 {% block body %}
+{% include 'includes/_chapter-sidebar.html' %}
     <main class="main article">
         <section class="hero article__hero">
             <div class="container">

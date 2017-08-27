@@ -116,6 +116,9 @@ a:hover {
 //=====================
 // ARTICLE ITEMS
 //=====================
+.is-article {
+    padding-left: 90px; //width of the sidebar
+}
 
 .article-list__link {
     background-color: inherit;
@@ -397,4 +400,42 @@ p.callout {
 
 .pink blockquote {
     color: darken($pink, 7%); //arb to make the color visible against the white bg
+}
+
+
+//==================
+//  SIDEBAR STYLES
+//===================
+
+.aside {
+    background-color: $black;
+    bottom: 0;
+    color: $white;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 90px; //spec
+    z-index: 1;
+}
+
+.sidebar {
+    left: 0;
+    padding: 0 36px; //spec
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chapter-list__item {
+    padding-bottom: 30px; //spec
+}
+
+.chapter-list__link {
+    color: $white;
+    font-size: 21px; //spec
+    text-decoration: none;
+}
+
+.chapter-list__link.is-active {
+    font-size: 36px; //spec
 }
