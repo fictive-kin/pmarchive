@@ -285,11 +285,19 @@ a:hover {
 
 .chapter {
     background-color: inherit;
-    padding: 45px 7.5%;
+    padding: 0 7.5% 45px;
     position: relative;
 
     @media screen and (min-width: $tablet) {
-        padding: 80px 6.1%;
+        padding: 0 6.1% 80px;
+    }
+}
+
+.chapter-anchor {
+    height: 45px;
+
+    @media screen and (min-width: $tablet) {
+        height: 80px;
     }
 }
 
