@@ -24,5 +24,4 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
         counter++;
     }
-
 });
