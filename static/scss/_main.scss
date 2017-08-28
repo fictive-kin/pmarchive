@@ -82,6 +82,7 @@ a:hover {
 
     @media screen and (min-width: $tablet) {
         font-size: $text-large; //spec
+        margin-bottom: 20px; //arb
     }
 }
 
@@ -238,6 +239,10 @@ a:hover {
 .article__title--guide {
     @media screen and (min-width: $desktop) {
         max-width: 700px;
+    }
+
+    @media screen and (min-width: $max-width) {
+        max-width: 1000px; //to fix text width in large viewports
     }
 }
 
