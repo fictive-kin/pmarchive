@@ -117,7 +117,11 @@ a:hover {
 // ARTICLE ITEMS
 //=====================
 .is-article {
-    padding-left: 90px; //width of the sidebar
+    padding-left: 60px; //width of the sidebar
+
+    @media screen and (min-width: $tablet) {
+        padding-left: 90px; //width of the sidebar
+    }
 }
 
 .article-list__link {
@@ -422,26 +426,37 @@ p.callout {
     left: 0;
     position: fixed;
     top: 0;
-    width: 90px; //spec
+    width: 60px; //spec
     z-index: 1;
+
+    @media screen and (min-width: $tablet) {
+        width: 90px; //spec
+    }
 }
 
 .sidebar {
-    left: 0;
+    left: 50%;
     padding: 0 36px; //spec
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
 }
 
-.chapter-list__item {
-    padding-bottom: 30px; //spec
+.chapter-list {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); //nav
+    justify-content: space-around;
 }
 
 .chapter-list__link {
     color: $white;
-    font-size: 21px; //spec
+    font-size: 18px; //arb
     text-decoration: none;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 21px; //spec
+    }
 }
 
 .chapter-list__link.is-active {

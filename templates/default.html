@@ -14,5 +14,6 @@
     <body class="{% block bodyClass %}{% endblock %}">
         {% block body %}
         {% endblock %}
+        <script src="{{url_for('static', filename='js/chapter-sidebar.js')}}"></script>
     </body>
 </html>
