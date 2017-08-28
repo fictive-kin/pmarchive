@@ -82,6 +82,7 @@ a:hover {
 
     @media screen and (min-width: $tablet) {
         font-size: $text-large; //spec
+        margin-bottom: 20px; //arb
     }
 }
 
@@ -116,6 +117,13 @@ a:hover {
 //=====================
 // ARTICLE ITEMS
 //=====================
+.is-article {
+    padding-left: 60px; //width of the sidebar
+
+    @media screen and (min-width: $tablet) {
+        padding-left: 90px; //width of the sidebar
+    }
+}
 
 .article-list__link {
     background-color: inherit;
@@ -232,6 +240,10 @@ a:hover {
     @media screen and (min-width: $desktop) {
         max-width: 700px;
     }
+
+    @media screen and (min-width: $max-width) {
+        max-width: 1000px; //to fix text width in large viewports
+    }
 }
 
 //======================
@@ -282,11 +294,19 @@ a:hover {
 
 .chapter {
     background-color: inherit;
-    padding: 45px 7.5%;
+    padding: 0 7.5% 45px;
     position: relative;
 
     @media screen and (min-width: $tablet) {
-        padding: 80px 6.1%;
+        padding: 0 6.1% 80px;
+    }
+}
+
+.chapter-anchor {
+    height: 45px;
+
+    @media screen and (min-width: $tablet) {
+        height: 80px;
     }
 }
 
@@ -397,4 +417,54 @@ p.callout {
 
 .pink blockquote {
     color: darken($pink, 7%); //arb to make the color visible against the white bg
+}
+
+
+//==================
+//  SIDEBAR STYLES
+//===================
+
+.aside {
+    background-color: $black;
+    bottom: 0;
+    color: $white;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 60px; //spec
+    z-index: 1;
+
+    @media screen and (min-width: $tablet) {
+        width: 90px; //spec
+    }
+}
+
+.sidebar {
+    left: 50%;
+    padding: 0 36px; //spec
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chapter-list {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); //nav
+    justify-content: space-around;
+    max-height: 400px; //spec
+}
+
+.chapter-list__link {
+    color: $white;
+    font-size: 18px; //arb
+    text-decoration: none;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 21px; //spec
+    }
+}
+
+.chapter-list__link.is-active {
+    font-size: 36px; //spec
 }

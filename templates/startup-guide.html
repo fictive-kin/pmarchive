@@ -1,16 +1,18 @@
 {% extends 'article.html' %}
 {% block bodyClass %}pink {{ super() }}{% endblock %}
 {% block body %}
+{% include 'includes/_chapter-sidebar.html' %}
     <main class="main article">
         <section class="hero article__hero">
             <div class="container">
                 <h3 class="article-list__subtitle">Something One</h3>
                 <h1 class="hero__header article__title--guide">The Pmarca  <span class="indent">Guide to Startups</span></h1>
-                <p class="article__chapters">8 chapters</p>
+                <p class="article__chapters">9 chapters</p>
             </div>
         </section>
         <article>
             <section class="chapter">
+                <div class="chapter-anchor" id="chapter-1"></div>
                 <div class="container">
                     <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
                     <h1 class="chapter__header">Chapter 1 : <span class="indent">Why Not To Do a Startup</span></h1>
@@ -171,6 +173,7 @@
                 </div> <!-- end article__body-wrapper -->
             </div> <!-- end article__body -->
             <section class="chapter">
+                <div class="chapter-anchor" id="chapter-2"></div>
                 <div class="container">
                     <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
                     <h1 class="chapter__header">Chapter 2 : <span class="indent">When the VCs say "no"</span></h1>
@@ -327,6 +330,7 @@
                 </div>
             </div>
             <section class="chapter">
+                <div class="chapter-anchor" id="chapter-3"></div>
                 <div class="container">
                     <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
                     <h1 class="chapter__header">Chapter 3: <span class="indent">"But I don't know any VCs!"</span></h1>
@@ -428,6 +432,7 @@
                 </div>
             </div>
             <section class="chapter">
+                <div class="chapter-anchor" id="chapter-4"></div>
                 <div class="container">
                     <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
                     <h1 class="chapter__header">Chapter 4: <span class="indent">The only thing that matters</span></h1>
@@ -585,6 +590,7 @@
                 </div>
             </div>
             <section class="chapter">
+                <div class="chapter-anchor" id="chapter-5"></div>
                 <div class="container">
                     <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
                     <h1 class="chapter__header">Chapter 5: <span class="indent">The Moby Dick theory of big companies</span></h1>
@@ -796,6 +802,7 @@
                 </div>
             </div>
             <section class="chapter">
+                <div class="chapter-anchor" id="chapter-6"></div>
                 <div class="container">
                     <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
                     <h1 class="chapter__header">Chapter 6: <span class="indent">How much funding is too little? Too much?</span></h1>
@@ -956,6 +963,7 @@
                 </div>
             </div>
             <section class="chapter">
+                <div class="chapter-anchor" id="chapter-7"></div>
                 <div class="container">
                     <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
                     <h1 class="chapter__header">Chapter 7: <span class="indent">Why a startup's initial business plan doesn't matter that much</span></h1>
@@ -1023,6 +1031,7 @@
                 </div>
             </div>
             <section class="chapter">
+                <div class="chapter-anchor" id="chapter-8"></div>
                 <div class="container">
                     <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
                     <h1 class="chapter__header">Chapter 8: <span class="indent">Hiring, managing, promoting, and firing executives</span></h1>
@@ -1223,6 +1232,7 @@
                 </div>
             </div>
             <section class="chapter">
+                <div class="chapter-anchor" id="chapter-9"></div>
                 <div class="container">
                     <h3 class="article-list__subtitle">The Pmarch Guide to Startups</h3>
                     <h1 class="chapter__header">Chapter 9: <span class="indent">How to hire a professional CEO</span></h1>

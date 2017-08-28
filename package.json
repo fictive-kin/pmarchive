@@ -1,0 +1,25 @@
+{
+  "name": "pmarchive",
+  "version": "1.0.0",
+  "description": "pmarchive.com",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:compile": "node-sass --output-style=compressed static/scss/screen.scss static/css/screen.css",
+    "sass:watch": "node-sass --watch static/scss/screen.scss static/css/screen.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fictivekin/pmarchive.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fictivekin/pmarchive/issues"
+  },
+  "homepage": "https://github.com/fictivekin/pmarchive#readme"
+}
