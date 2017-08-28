@@ -1,0 +1,23 @@
+{
+  "name": "pmarchive",
+  "version": "1.0.0",
+  "description": "pmarchive.com",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fictivekin/pmarchive.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fictivekin/pmarchive/issues"
+  },
+  "homepage": "https://github.com/fictivekin/pmarchive#readme"
+}
