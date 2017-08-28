@@ -452,6 +452,7 @@ p.callout {
     flex-direction: column;
     height: calc(100vh - 60px); //nav
     justify-content: space-around;
+    max-height: 400px; //spec
 }
 
 .chapter-list__link {
