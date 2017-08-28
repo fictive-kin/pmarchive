@@ -8,7 +8,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:compile": "node-sass --output-style=compressed static/scss/screen.scss static/css/screen.css",
+    "sass:watch": "node-sass --watch static/scss/screen.scss static/css/screen.css"
   },
   "repository": {
     "type": "git",
