@@ -468,3 +468,102 @@ p.callout {
 .chapter-list__link.is-active {
     font-size: 36px; //spec
 }
+
+//==============
+//  NAV STYLES
+//==============
+
+.nav {
+    background-color: $black;
+    min-height: 75px;
+    position: relative;
+}
+
+.site-nav__wrapper {
+    min-height: 75px; //spec
+    position: relative;
+
+}
+
+.brand {
+    @include px-regular;
+
+    color: $white;
+    font-size: 19px; //spec
+    left: 93px; //spec
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media screen and (min-width: $tablet) {
+        font-size: 26px; //spec
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+//hamburger menu
+.site-nav__icon-link {
+    cursor: pointer;
+    display: block;
+    left: 30px; //spec
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-container {
+  display: inline-block;
+  height: 14px; //a tiny bit smaller; in order for the hamburger container to be the height of the logo, it needed to be 14
+  width: 22px; //spec
+
+  @media screen and (min-width: $tablet) {
+      height: 22px;
+      width: 30px;
+  }
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    background-color: $white;
+    height: 2px; // spec says 2.86, however the browser doesn't do a great job rendering decimal heights. rounding to 3px was too thick for the height of the nav to be aligned with the logo
+    position: absolute;
+    transition: all .4s ease-in-out;
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+        height: 4px; //spec
+    }
+}
+
+.hamburger-top {
+  top: 0;
+}
+
+.hamburger-middle {
+  top: .4rem;
+  transition: opacity .3s ease;
+
+  @media screen and (min-width: $tablet) {
+      top: .59rem;
+  }
+}
+
+.hamburger-bottom {
+  bottom: 0;
+}
+
+.js-is-active .hamburger-top {
+  transform: rotate(-45deg);
+  transform-origin: 18px 0;
+}
+
+.js-is-active .hamburger-middle {
+  opacity: 0;
+}
+
+.js-is-active .hamburger-bottom {
+  transform: rotate(45deg);
+  transform-origin: 25px 0;
+}

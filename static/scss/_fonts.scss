@@ -82,3 +82,8 @@
     font-family: helvetica;
     font-weight: 500;
 }
+
+@mixin px-regular {
+    font-family: 'Px Regular';
+    font-weight: 300;
+}

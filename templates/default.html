@@ -12,6 +12,23 @@
         <link href="{{url_for('static', filename='css/screen.css')}}" media="screen" rel="stylesheet" type="text/css" />
      </head>
     <body class="{% block bodyClass %}{% endblock %}">
+        <nav class="nav">
+            <div class="site-nav__wrapper">
+                <a class="site-nav__icon-link hamburger-container">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </a>
+                <div class="site-nav__subwrapper">
+                    <ul class="site-nav__list">
+                            <li class="site-nav__list-item">
+                                <a href="" class="site-nav__link"></a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            <h1 class="brand">Pmarchive</h1>
+        </nav>
         {% block body %}
         {% endblock %}
         <script src="{{url_for('static', filename='js/chapter-sidebar.js')}}"></script>
