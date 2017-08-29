@@ -476,12 +476,25 @@ p.callout {
 //==============
 //  NAV STYLES
 //==============
+.is-visually-hidden {
+    left: -9999%;
+    position: absolute;
+    top: 0;
+}
+
+.js-is-active.body {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
 
 .nav {
     background-color: $black;
     min-height: 57px; //spec
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     @media screen and (min-width: $tablet) {
         min-height: 75px; //spec
@@ -594,17 +607,24 @@ p.callout {
 }
 
 .site-nav__subwrapper {
-    display: none;
+    background-color: $black;
+    left: 0;
+    min-height: 768px; //height of menu and nav
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateZ(0);
+    transition: opacity .3s ease-in-out;
+
+    @media screen and (min-width: $desktop) {
+        bottom: 0;
+        position: fixed;
+    }
 }
 
 .js-is-active .site-nav__subwrapper {
-    background-color: $black;
-    bottom: 0;
-    display: block;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
+    opacity: 1;
 }
 
 .site-nav__list {
@@ -614,9 +634,11 @@ p.callout {
     flex-direction: row;
     flex-wrap: wrap;
     left: 0;
+    opacity: 0;
     position: absolute;
     right: 0;
     top: 57px;
+    transition: opacity .2s ease-in-out;
     z-index: 2;
 
     @media screen and (min-width: $tablet) {
@@ -626,11 +648,13 @@ p.callout {
 
 .js-is-active .site-nav__list {
     display: flex;
+    opacity: 1;
 }
 
 .site-nav__link {
     display: block;
     text-decoration: none;
+    padding: 30px 18.5%; //77px / 414px
 
     @media screen and (min-width: $desktop) {
         max-height: calc(50vh - 75px);
@@ -646,6 +670,7 @@ p.callout {
     font-size: 12px;
     font-weight: 100;
     margin-bottom: 14px;
+    padding-left: 30px;
 
     @media screen and (min-width: $desktop) {
         font-size: 25px;
@@ -668,9 +693,34 @@ p.callout {
 }
 
 .site-nav__list-item {
+    min-height: 173px; //spec
     width: 100%;
 
     @media screen and (min-width: $desktop) {
+        min-height: 0;
         width: 50%;
     }
+}
+
+.main {
+    position: relative;
+}
+
+.main::before {
+    background-color: $black;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .2s ease-in-out;
+    z-index: 1;
+
+}
+
+.js-is-active .main::before {
+    opacity: .8;
 }
