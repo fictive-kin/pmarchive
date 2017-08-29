@@ -146,19 +146,23 @@ a:hover {
 }
 
 //TODO: make an each loop for colors
-.pink .article-list__link {
+.pink .article-list__link,
+.pink.site-nav__list-item {
     background-color: $pink;
 }
 
-.teal .article-list__link {
+.teal .article-list__link,
+.teal.site-nav__list-item  {
     background-color: $teal;
 }
 
-.gold .article-list__link {
+.gold .article-list__link,
+.gold.site-nav__list-item  {
     background-color: $gold;
 }
 
-.purple .article-list__link {
+.purple .article-list__link,
+.purple.site-nav__list-item  {
     background-color: $purple;
 }
 
@@ -477,6 +481,7 @@ p.callout {
     background-color: $black;
     min-height: 57px; //spec
     position: relative;
+    z-index: 1;
 
     @media screen and (min-width: $tablet) {
         min-height: 75px; //spec
@@ -517,6 +522,7 @@ p.callout {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 .hamburger-container {
@@ -584,5 +590,87 @@ p.callout {
     @media screen and (min-width: $tablet) {
         bottom: 0;
         transform-origin: 25px 0;
+    }
+}
+
+.site-nav__subwrapper {
+    display: none;
+}
+
+.js-is-active .site-nav__subwrapper {
+    background-color: $black;
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.site-nav__list {
+    bottom: 0;
+    display: none;
+    flex: 0 0 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 57px;
+    z-index: 2;
+
+    @media screen and (min-width: $tablet) {
+        top: 75px;
+    }
+}
+
+.js-is-active .site-nav__list {
+    display: flex;
+}
+
+.site-nav__link {
+    display: block;
+    text-decoration: none;
+
+    @media screen and (min-width: $desktop) {
+        max-height: calc(50vh - 75px);
+        padding: 60px 6.2%; //92px / 1440px
+    }
+}
+
+.site-nav__link .indent {
+    padding-left: 100px;
+}
+
+.site-nav__subtitle {
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: 14px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 25px;
+        margin-bottom: 15px; //less than spec to ensure there'd be space among smaller heigh viewports
+    }
+}
+
+.site-nav__title {
+    @include serif-rom;
+
+    font-size: 31px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 7vh;
+    }
+
+    @media screen and (min-width: $max-width) {
+        font-size: 65px;
+    }
+}
+
+.site-nav__list-item {
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+        width: 50%;
     }
 }
