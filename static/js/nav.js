@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     hamburgerEl.addEventListener('click', function(){
         bodyEl.classList.toggle('js-is-active');
+        hamburgerEl.classList.add('is-clicked');
     });
 
     //for accessibility

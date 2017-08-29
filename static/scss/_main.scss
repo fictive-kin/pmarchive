@@ -483,11 +483,14 @@ p.callout {
 }
 
 .js-is-active.body {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
+
+    @media screen and (min-width: $desktop) {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
 }
 
 .nav {
@@ -547,6 +550,10 @@ p.callout {
       height: 22px;
       width: 30px;
   }
+}
+
+.hamburger-container.is-clicked {
+    outline: 0;
 }
 
 .hamburger-top,
