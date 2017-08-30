@@ -681,6 +681,10 @@ p.callout {
 .js-is-active .site-nav__list {
     display: flex;
     opacity: 1;
+
+    @media screen and (min-width: $desktop) {
+        height: calc(100vh - 75px);
+    }
 }
 
 .site-nav__link {
