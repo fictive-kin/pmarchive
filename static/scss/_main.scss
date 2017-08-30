@@ -114,10 +114,14 @@ a:hover {
     }
 }
 
+.hero__text a {
+    color: $white;
+}
+
 //=====================
 // ARTICLE ITEMS
 //=====================
-.is-article {
+.is-article .main {
     padding-left: 60px; //width of the sidebar
 
     @media screen and (min-width: $tablet) {
@@ -146,41 +150,50 @@ a:hover {
 }
 
 //TODO: make an each loop for colors
-.pink .article-list__link {
+.pink .article-list__link,
+.pink.site-nav__list-item {
     background-color: $pink;
 }
 
-.teal .article-list__link {
+.teal .article-list__link,
+.teal.site-nav__list-item  {
     background-color: $teal;
 }
 
-.gold .article-list__link {
+.gold .article-list__link,
+.gold.site-nav__list-item  {
     background-color: $gold;
 }
 
-.purple .article-list__link {
+.purple .article-list__link,
+.purple.site-nav__list-item  {
     background-color: $purple;
 }
 
-.article-list__link:hover {
+.article-list__link:hover,
+.site-nav__list-item:hover {
     background-color: $black;
     opacity: 1;
     transform: translateZ(0);
 }
 
-.pink .article-list__link:hover {
+.pink .article-list__link:hover,
+.pink.site-nav__list-item:hover {
     color: $pink;
 }
 
-.teal .article-list__link:hover {
+.teal .article-list__link:hover,
+.teal.site-nav__list-item:hover {
     color: $teal;
 }
 
-.gold .article-list__link:hover {
+.gold .article-list__link:hover,
+.gold.site-nav__list-item:hover {
     color: $gold;
 }
 
-.purple .article-list__link:hover {
+.purple .article-list__link:hover,
+.purple.site-nav__list-item:hover {
     color: $purple;
 }
 
@@ -467,4 +480,280 @@ p.callout {
 
 .chapter-list__link.is-active {
     font-size: 36px; //spec
+}
+
+//==============
+//  NAV STYLES
+//==============
+.is-visually-hidden {
+    left: -9999%;
+    position: absolute;
+    top: 0;
+}
+
+.js-is-active.body {
+
+    @media screen and (min-width: $desktop) {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+}
+
+.nav {
+    background-color: $black;
+    min-height: 57px; //spec
+    position: relative;
+    z-index: 2;
+
+    @media screen and (min-width: $tablet) {
+        min-height: 75px; //spec
+    }
+}
+
+.site-nav__list-item {
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+        height: 50%;
+        min-height: 0;
+        width: 50%;
+    }
+}
+
+.site-nav__wrapper {
+    min-height: 57px; //spec
+    position: relative;
+
+    @media screen and (min-width: $tablet) {
+        min-height: 75px; //spec
+    }
+}
+
+.brand {
+    @include px-regular;
+
+    color: $white;
+    font-size: 19px; //spec
+    left: 93px; //spec
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 26px; //spec
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+//hamburger menu
+.site-nav__icon-link {
+    cursor: pointer;
+    display: block;
+    left: 30px; //spec
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.hamburger-container {
+  display: inline-block;
+  height: 14px; //a tiny bit smaller; in order for the hamburger container to be the height of the logo, it needed to be 14
+  width: 22px; //spec
+
+  @media screen and (min-width: $tablet) {
+      height: 22px;
+      width: 30px;
+  }
+}
+
+.hamburger-container.is-clicked {
+    outline: 0;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    background-color: $white;
+    height: 2px; // spec says 2.86, however the browser doesn't do a great job rendering decimal heights. rounding to 3px was too thick for the height of the nav to be aligned with the logo
+    position: absolute;
+    transform: translateZ(0);
+    transition: all .4s ease-in-out;
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+        height: 4px; //spec
+    }
+}
+
+.hamburger-top {
+  top: 0;
+}
+
+.hamburger-middle {
+  top: .4rem;
+  transition: opacity .3s ease;
+
+  @media screen and (min-width: $tablet) {
+      top: .59rem;
+  }
+}
+
+.hamburger-bottom {
+  bottom: 0;
+}
+
+.js-is-active .hamburger-top {
+    top: 0;
+    transform: rotate(-45deg);
+    transform-origin: 18px 0;
+
+    @media screen and (min-width: $tablet) {
+        top: 8px;
+    }
+}
+
+.js-is-active .hamburger-middle {
+  opacity: 0;
+}
+
+.js-is-active .hamburger-bottom {
+    bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: 21px 0;
+
+    @media screen and (min-width: $tablet) {
+        transform-origin: 25px 0;
+    }
+}
+
+.site-nav__subwrapper {
+    background-color: $black;
+    left: 0;
+    opacity: 0;
+    right: 0;
+    top: 0;
+    transform: translateZ(0);
+    transition: opacity .3s ease-in-out;
+    z-index: -1;
+
+    @media screen and (min-width: $desktop) {
+        bottom: 0;
+    }
+}
+
+.js-is-active .site-nav__subwrapper {
+    min-height: 768px; //height of menu and nav
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+
+    @media screen and (min-width: $desktop) {
+        position: fixed;
+    }
+}
+
+.site-nav__list {
+    bottom: 0;
+    display: none;
+    flex: 0 0 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 57px;
+    transition: opacity .2s ease-in-out;
+    z-index: 2;
+
+    @media screen and (min-width: $tablet) {
+        top: 75px;
+    }
+}
+
+.js-is-active .site-nav__list {
+    display: flex;
+    opacity: 1;
+
+    @media screen and (min-width: $desktop) {
+        height: calc(100vh - 75px);
+    }
+}
+
+.site-nav__link {
+    color: $black;
+    display: block;
+    height: 100%;
+    min-height: 173px; //spec
+    padding: 30px 18.5%; //77px / 414px
+    text-decoration: none;
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+        padding: 60px 6.2%; //92px / 1440px
+    }
+}
+
+.site-nav__link .indent {
+    padding-left: 100px; //spec
+}
+
+.site-nav__subtitle {
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: 14px;
+    padding-left: 30px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 25px;
+        margin-bottom: 15px; //less than spec to ensure there'd be space among smaller heigh viewports
+    }
+}
+
+.site-nav__title {
+    @include serif-rom;
+
+    font-size: 31px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 4vw;
+    }
+
+    @media screen and (min-width: $max-width) {
+        font-size: 65px;
+    }
+}
+
+.main {
+    position: relative;
+}
+
+.main::before {
+    background-color: $black;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .2s ease-in-out;
+    z-index: -1;
+
+}
+
+.js-is-active .main::before {
+    opacity: .8;
+    z-index: 1;
+}
+
+.site-nav__link:hover {
+    opacity: 1;
 }
