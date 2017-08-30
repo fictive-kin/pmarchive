@@ -609,7 +609,7 @@ p.callout {
 }
 
 .js-is-active .hamburger-top {
-    top: 3px;
+    top: 0;
     transform: rotate(-45deg);
     transform-origin: 18px 0;
 
@@ -623,12 +623,11 @@ p.callout {
 }
 
 .js-is-active .hamburger-bottom {
-    bottom: -3px;
+    bottom: 0;
     transform: rotate(45deg);
     transform-origin: 21px 0;
 
     @media screen and (min-width: $tablet) {
-        bottom: 0;
         transform-origin: 25px 0;
     }
 }
