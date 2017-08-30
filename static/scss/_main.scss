@@ -147,44 +147,49 @@ a:hover {
 
 //TODO: make an each loop for colors
 .pink .article-list__link,
-.pink.site-nav__list-item {
+.pink .site-nav__link {
     background-color: $pink;
 }
 
 .teal .article-list__link,
-.teal.site-nav__list-item  {
+.teal .site-nav__link  {
     background-color: $teal;
 }
 
 .gold .article-list__link,
-.gold.site-nav__list-item  {
+.gold .site-nav__link  {
     background-color: $gold;
 }
 
 .purple .article-list__link,
-.purple.site-nav__list-item  {
+.purple .site-nav__link  {
     background-color: $purple;
 }
 
-.article-list__link:hover {
+.article-list__link:hover,
+.site-nav__link:hover {
     background-color: $black;
     opacity: 1;
     transform: translateZ(0);
 }
 
-.pink .article-list__link:hover {
+.pink .article-list__link:hover,
+.pink .site-nav__link:hover {
     color: $pink;
 }
 
-.teal .article-list__link:hover {
+.teal .article-list__link:hover,
+.teal .site-nav__link:hover {
     color: $teal;
 }
 
-.gold .article-list__link:hover {
+.gold .article-list__link:hover,
+.gold .site-nav__link:hover {
     color: $gold;
 }
 
-.purple .article-list__link:hover {
+.purple .article-list__link:hover,
+.purple .site-nav__link:hover {
     color: $purple;
 }
 
@@ -504,6 +509,14 @@ p.callout {
     }
 }
 
+.site-nav__list-item {
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+        width: 50%;
+    }
+}
+
 .site-nav__wrapper {
     min-height: 57px; //spec
     position: relative;
@@ -522,6 +535,7 @@ p.callout {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
 
     @media screen and (min-width: $tablet) {
         font-size: 26px; //spec
@@ -538,7 +552,7 @@ p.callout {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 2;
 }
 
 .hamburger-container {
@@ -616,22 +630,27 @@ p.callout {
 .site-nav__subwrapper {
     background-color: $black;
     left: 0;
-    min-height: 768px; //height of menu and nav
     opacity: 0;
-    position: absolute;
     right: 0;
     top: 0;
     transform: translateZ(0);
     transition: opacity .3s ease-in-out;
+    z-index: -1;
 
     @media screen and (min-width: $desktop) {
         bottom: 0;
-        position: fixed;
     }
 }
 
 .js-is-active .site-nav__subwrapper {
+    min-height: 768px; //height of menu and nav
     opacity: 1;
+    position: absolute;
+    z-index: 1;
+
+    @media screen and (min-width: $desktop) {
+        position: fixed;
+    }
 }
 
 .site-nav__list {
@@ -660,17 +679,21 @@ p.callout {
 
 .site-nav__link {
     display: block;
-    text-decoration: none;
+    height: 100%;
+    min-height: 173px; //spec
     padding: 30px 18.5%; //77px / 414px
+    text-decoration: none;
+    width: 100%;
 
     @media screen and (min-width: $desktop) {
-        max-height: calc(50vh - 75px);
+        max-height: 50vh;
+        min-height: 0;
         padding: 60px 6.2%; //92px / 1440px
     }
 }
 
 .site-nav__link .indent {
-    padding-left: 100px;
+    padding-left: 100px; //spec
 }
 
 .site-nav__subtitle {
@@ -699,16 +722,6 @@ p.callout {
     }
 }
 
-.site-nav__list-item {
-    min-height: 173px; //spec
-    width: 100%;
-
-    @media screen and (min-width: $desktop) {
-        min-height: 0;
-        width: 50%;
-    }
-}
-
 .main {
     position: relative;
 }
@@ -724,10 +737,11 @@ p.callout {
     right: 0;
     top: 0;
     transition: opacity .2s ease-in-out;
-    z-index: 1;
+    z-index: -1;
 
 }
 
 .js-is-active .main::before {
     opacity: .8;
+    z-index: 1;
 }
