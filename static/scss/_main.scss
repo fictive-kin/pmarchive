@@ -114,10 +114,14 @@ a:hover {
     }
 }
 
+.hero__text a {
+    color: $white;
+}
+
 //=====================
 // ARTICLE ITEMS
 //=====================
-.is-article {
+.is-article .main {
     padding-left: 60px; //width of the sidebar
 
     @media screen and (min-width: $tablet) {
@@ -147,49 +151,49 @@ a:hover {
 
 //TODO: make an each loop for colors
 .pink .article-list__link,
-.pink .site-nav__link {
+.pink.site-nav__list-item {
     background-color: $pink;
 }
 
 .teal .article-list__link,
-.teal .site-nav__link  {
+.teal.site-nav__list-item  {
     background-color: $teal;
 }
 
 .gold .article-list__link,
-.gold .site-nav__link  {
+.gold.site-nav__list-item  {
     background-color: $gold;
 }
 
 .purple .article-list__link,
-.purple .site-nav__link  {
+.purple.site-nav__list-item  {
     background-color: $purple;
 }
 
 .article-list__link:hover,
-.site-nav__link:hover {
+.site-nav__list-item:hover {
     background-color: $black;
     opacity: 1;
     transform: translateZ(0);
 }
 
 .pink .article-list__link:hover,
-.pink .site-nav__link:hover {
+.pink.site-nav__list-item:hover {
     color: $pink;
 }
 
 .teal .article-list__link:hover,
-.teal .site-nav__link:hover {
+.teal.site-nav__list-item:hover {
     color: $teal;
 }
 
 .gold .article-list__link:hover,
-.gold .site-nav__link:hover {
+.gold.site-nav__list-item:hover {
     color: $gold;
 }
 
 .purple .article-list__link:hover,
-.purple .site-nav__link:hover {
+.purple.site-nav__list-item:hover {
     color: $purple;
 }
 
@@ -513,6 +517,8 @@ p.callout {
     width: 100%;
 
     @media screen and (min-width: $desktop) {
+        height: 50%;
+        min-height: 0;
         width: 50%;
     }
 }
@@ -678,6 +684,7 @@ p.callout {
 }
 
 .site-nav__link {
+    color: $black;
     display: block;
     height: 100%;
     min-height: 173px; //spec
@@ -686,8 +693,6 @@ p.callout {
     width: 100%;
 
     @media screen and (min-width: $desktop) {
-        max-height: 50vh;
-        min-height: 0;
         padding: 60px 6.2%; //92px / 1440px
     }
 }
@@ -714,7 +719,7 @@ p.callout {
     font-size: 31px;
 
     @media screen and (min-width: $desktop) {
-        font-size: 7vh;
+        font-size: 4vw;
     }
 
     @media screen and (min-width: $max-width) {
@@ -744,4 +749,8 @@ p.callout {
 .js-is-active .main::before {
     opacity: .8;
     z-index: 1;
+}
+
+.site-nav__link:hover {
+    opacity: 1;
 }
